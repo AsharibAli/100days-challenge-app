@@ -3,10 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { SparklesCore } from "@/components/ui/sparkles";
 
 const words = `Join the challenge and level up your coding skills. Commit to
-coding every day for 100 days and watch your progress soar, The Ultimate goal is to Become a Developer, Starting from Very Basics to Advance Level.
+coding every day for 100 days and watch your progress. The Ultimate goal is to Become a Developer, Starting from Very Basics to Advance Level.
 `;
 
 export default function Main() {
@@ -16,7 +15,7 @@ export default function Main() {
         <Header />
       </div>
 
-      <section className="w-full h-screen flex flex-col items-center justify-center py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-gray-900 to-gray-800 text-gray-50">
+      <section className="w-full h-screen flex flex-col items-center justify-center py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br bg-gray-800 text-gray-50">
         <div className="container px-4 md:px-6 text-center">
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
