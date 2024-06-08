@@ -16,32 +16,14 @@ const Day93 = () => {
             Day-93 Task
           </h3>
           <p>
-            Read the following Articles and Code along with it:
+            Read the following Article and Code along with it:
             <br /> <br />
             <strong>
               <a
-                href="https://nextjs.org/learn/react-foundations"
+                href="https://nextjs.org/learn/dashboard-app/partial-prerendering"
                 target="_blank"
               >
-                React Foundation
-              </a>
-            </strong>
-            <br /> <br />
-            <strong>
-              <a
-                href="https://nextjs.org/learn/react-foundations/what-is-react-and-nextjs"
-                target="_blank"
-              >
-                About React and Next.js
-              </a>
-            </strong>
-            <br /> <br />
-            <strong>
-              <a
-                href="https://nextjs.org/learn/react-foundations/rendering-ui"
-                target="_blank"
-              >
-                Rendering User Interfaces (UI)
+                Partial Prerendering
               </a>
             </strong>
           </p>

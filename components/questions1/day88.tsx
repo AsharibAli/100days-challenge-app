@@ -20,28 +20,19 @@ const Day88 = () => {
             <br /> <br />
             <strong>
               <a
-                href="https://nextjs.org/learn/react-foundations"
+                href="https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages"
                 target="_blank"
               >
-                React Foundation
+                Creating Layouts and Pages
               </a>
             </strong>
             <br /> <br />
             <strong>
               <a
-                href="https://nextjs.org/learn/react-foundations/what-is-react-and-nextjs"
+                href="https://nextjs.org/learn/dashboard-app/navigating-between-pages"
                 target="_blank"
               >
-                About React and Next.js
-              </a>
-            </strong>
-            <br /> <br />
-            <strong>
-              <a
-                href="https://nextjs.org/learn/react-foundations/rendering-ui"
-                target="_blank"
-              >
-                Rendering User Interfaces (UI)
+                Navigating Between Pages
               </a>
             </strong>
           </p>
