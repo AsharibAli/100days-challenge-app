@@ -35,15 +35,24 @@ const Day6 = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Day 1</CardTitle>
+        <CardTitle>Day 6</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 1
+            Question 16
           </h3>
-          <p>Install Node.js, TypeScript and VS Code on your setup.</p>
+          <p>
+            More Guests: You just found a bigger dinner table, so now more space
+            is available. Think of three more guests to invite to dinner,{" "}
+            <a
+              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-06"
+              target="_blank"
+            >
+              full-question
+            </a>{" "}
+          </p>
           <div className="p-2">
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -92,7 +101,7 @@ const Day6 = () => {
                       </a>{" "}
                     </strong>
                     <br /> <br />
-                    {/* <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
+                    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
@@ -109,7 +118,7 @@ const Day6 = () => {
               `}
                         </pre>
                       </code>
-                    </div> */}
+                    </div>
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
@@ -130,12 +139,15 @@ const Day6 = () => {
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 2
+            Question 17
           </h3>
           <p>
-            Personal Message: Store a person’s name in a variable, and print a
-            message to that person. Your message should be simple, such as,
-            “Hello Eric, would you like to learn some Python today?”
+            Shrinking Guest List: You just found out that your new dinner table
+            won’t arrive in time for the dinner, and you have space for only two
+            guests,{" "}
+            <a href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-06">
+              full-question
+            </a>
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -145,7 +157,7 @@ const Day6 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong>➡️ Explanation of Question 2</strong>
+                    <strong>➡️ Explanation of Question 17</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`This code defines a variable myName with the value "Asharib"
@@ -183,11 +195,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 3
+            Question 18
           </h3>
           <p>
-            Name Cases: Store a person’s name in a variable, and then print that
-            person’s name in lowercase, uppercase, and titlecase.
+            Seeing the World: Think of at least five places in the world you’d
+            like to visit. - Store the locations in a array. Make sure the array
+            is not in alphabetical order,{" "}
+            <a
+              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-06"
+              target="_blank"
+            >
+              full-question
+            </a>
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -197,7 +216,7 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 3 </strong>
+                    <strong> ➡️ Explanation of Question 18 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`

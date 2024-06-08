@@ -35,15 +35,20 @@ const Day5 = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Day 1</CardTitle>
+        <CardTitle>Day 5</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 1
+            Question 13
           </h3>
-          <p>Install Node.js, TypeScript and VS Code on your setup.</p>
+          <p>
+            Your Own Array: Think of your favorite mode of transportation, such
+            as a motorcycle or a car, and make a list that stores several
+            examples. Use your list to print a series of statements about these
+            items, such as “I would like to own a Honda motorcycle.”
+          </p>
           <div className="p-2">
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -52,7 +57,7 @@ const Day5 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 1 </strong>
+                    <strong> ➡️ Explanation of Question 13 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     <strong>What is Nodejs? </strong>
@@ -92,7 +97,7 @@ const Day5 = () => {
                       </a>{" "}
                     </strong>
                     <br /> <br />
-                    {/* <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
+                    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
@@ -109,7 +114,7 @@ const Day5 = () => {
               `}
                         </pre>
                       </code>
-                    </div> */}
+                    </div>
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
@@ -130,12 +135,13 @@ const Day5 = () => {
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 2
+            Question 14
           </h3>
           <p>
-            Personal Message: Store a person’s name in a variable, and print a
-            message to that person. Your message should be simple, such as,
-            “Hello Eric, would you like to learn some Python today?”
+            Guest List: If you could invite anyone, living or deceased, to
+            dinner, who would you invite? Make a list that includes at least
+            three people you’d like to invite to dinner. Then use your list to
+            print a message to each person, inviting them to dinner.
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -145,7 +151,7 @@ const Day5 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong>➡️ Explanation of Question 2</strong>
+                    <strong>➡️ Explanation of Question 14</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`This code defines a variable myName with the value "Asharib"
@@ -183,11 +189,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 3
+            Question 15
           </h3>
           <p>
-            Name Cases: Store a person’s name in a variable, and then print that
-            person’s name in lowercase, uppercase, and titlecase.
+            Changing Guest List: You just heard that one of your guests can’t
+            make the dinner, so you need to send out a new set of invitations.
+            You’ll have to think of someone else to invite,{" "}
+            <a
+              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-05"
+              target="_blank"
+            >
+              full-question
+            </a>
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -197,7 +210,7 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 3 </strong>
+                    <strong> ➡️ Explanation of Question 15 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`

@@ -35,15 +35,21 @@ const Day4 = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Day 1</CardTitle>
+        <CardTitle>Day 4</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 1
+            Question 10
           </h3>
-          <p>Install Node.js, TypeScript and VS Code on your setup.</p>
+          <p>
+            Adding Comments: Choose two of the programs you’ve written, and add
+            at least one comment to each. If you don’t have anything specific to
+            write because your programs are too simple at this point, just add
+            your name and the current date at the top of each program file. Then
+            write one sentence describing what the program does.
+          </p>
           <div className="p-2">
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -52,7 +58,7 @@ const Day4 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 1 </strong>
+                    <strong> ➡️ Explanation of Question 10 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     <strong>What is Nodejs? </strong>
@@ -92,7 +98,7 @@ const Day4 = () => {
                       </a>{" "}
                     </strong>
                     <br /> <br />
-                    {/* <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
+                    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
@@ -109,7 +115,7 @@ const Day4 = () => {
               `}
                         </pre>
                       </code>
-                    </div> */}
+                    </div>
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
@@ -130,12 +136,12 @@ const Day4 = () => {
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 2
+            Question 11
           </h3>
           <p>
-            Personal Message: Store a person’s name in a variable, and print a
-            message to that person. Your message should be simple, such as,
-            “Hello Eric, would you like to learn some Python today?”
+            Names: Store the names of a few of your friends in a array called
+            names. Print each person’s name by accessing each element in the
+            list, one at a time.
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -145,7 +151,7 @@ const Day4 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong>➡️ Explanation of Question 2</strong>
+                    <strong>➡️ Explanation of Question 11</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`This code defines a variable myName with the value "Asharib"
@@ -183,11 +189,13 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 3
+            Question 12
           </h3>
           <p>
-            Name Cases: Store a person’s name in a variable, and then print that
-            person’s name in lowercase, uppercase, and titlecase.
+            Greetings: Start with the array you used in Exercise 11, but instead
+            of just printing each person’s name, print a message to them. The
+            text of each message should be the same, but each message should be
+            personalized with the person’s name.
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -197,7 +205,7 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 3 </strong>
+                    <strong> ➡️ Explanation of Question 12 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`

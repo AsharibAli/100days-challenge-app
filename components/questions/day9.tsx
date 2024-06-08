@@ -35,15 +35,22 @@ const Day9 = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Day 1</CardTitle>
+        <CardTitle>Day 9</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 1
+            Question 25
           </h3>
-          <p>Install Node.js, TypeScript and VS Code on your setup.</p>
+          <p>
+            Alien Colors #1: Imagine an alien was just shot down in a game.
+            Create a variable called alien_color and assign it a value of green,
+            yellow, or red.{" "}
+            <a href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-09">
+              full-question
+            </a>{" "}
+          </p>
           <div className="p-2">
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -52,7 +59,7 @@ const Day9 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 1 </strong>
+                    <strong> ➡️ Explanation of Question 25 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     <strong>What is Nodejs? </strong>
@@ -92,7 +99,7 @@ const Day9 = () => {
                       </a>{" "}
                     </strong>
                     <br /> <br />
-                    {/* <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
+                    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
@@ -109,7 +116,7 @@ const Day9 = () => {
               `}
                         </pre>
                       </code>
-                    </div> */}
+                    </div>
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
@@ -130,12 +137,17 @@ const Day9 = () => {
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 2
+            Question 26
           </h3>
           <p>
-            Personal Message: Store a person’s name in a variable, and print a
-            message to that person. Your message should be simple, such as,
-            “Hello Eric, would you like to learn some Python today?”
+            Alien Colors #2: Choose a color for an alien as you did in Exercise
+            25, and write an if-else chain.{" "}
+            <a
+              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-09"
+              target="_blank"
+            >
+              full-question
+            </a>
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -145,7 +157,7 @@ const Day9 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong>➡️ Explanation of Question 2</strong>
+                    <strong>➡️ Explanation of Question 26</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`This code defines a variable myName with the value "Asharib"
@@ -183,11 +195,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
         <div className="space-y-4">
           <h3 className="font-semibold flex items-center">
             <FileQuestionIcon className="w-5 h-5 mr-2" />
-            Question 3
+            Question 27
           </h3>
           <p>
-            Name Cases: Store a person’s name in a variable, and then print that
-            person’s name in lowercase, uppercase, and titlecase.
+            Alien Colors #3: Turn your if-else chain from Exercise 5-4 into an
+            if-else chain. - If the alien is green, print a message that the
+            player earned 5 points,{" "}
+            <a
+              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-09"
+              target="_blank"
+            >
+              full-question
+            </a>
           </p>
           <div className="p-2">
             <AlertDialog>
