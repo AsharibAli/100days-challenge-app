@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Day1 from "@/components/questions/day1";
 import Day2 from "@/components/questions/day2";
-<<<<<<< HEAD
 import Day3 from "@/components/questions/day3";
 import Day4 from "@/components/questions/day4";
 import Day5 from "@/components/questions/day5";
@@ -51,58 +50,56 @@ import Day47 from "@/components/questions/day47";
 import Day48 from "@/components/questions/day48";
 import Day49 from "@/components/questions/day49";
 import Day50 from "@/components/questions/day50";
-=======
-import Day51 from "@/components/questions1/day51";
-import Day52 from "@/components/questions1/day52";
-import Day53 from "@/components/questions1/day53";
-import Day54 from "@/components/questions1/day54";
-import Day55 from "@/components/questions1/day55";
-import Day56 from "@/components/questions1/day56";
-import Day57 from "@/components/questions1/day57";
-import Day58 from "@/components/questions1/day58";
-import Day59 from "@/components/questions1/day59";
-import Day60 from "@/components/questions1/day60";
-import Day61 from "@/components/questions1/day61";
-import Day62 from "@/components/questions1/day62";
-import Day63 from "@/components/questions1/day63";
-import Day64 from "@/components/questions1/day64";
-import Day65 from "@/components/questions1/day65";
-import Day66 from "@/components/questions1/day66";
-import Day67 from "@/components/questions1/day67";
-import Day68 from "@/components/questions1/day68";
-import Day69 from "@/components/questions1/day69";
-import Day70 from "@/components/questions1/day70";
-import Day71 from "@/components/questions1/day71";
-import Day72 from "@/components/questions1/day72";
-import Day73 from "@/components/questions1/day73";
-import Day74 from "@/components/questions1/day74";
-import Day75 from "@/components/questions1/day75";
-import Day76 from "@/components/questions1/day76";
-import Day77 from "@/components/questions1/day77";
-import Day78 from "@/components/questions1/day78";
-import Day79 from "@/components/questions1/day79";
-import Day80 from "@/components/questions1/day80";
-import Day81 from "@/components/questions1/day81";
-import Day82 from "@/components/questions1/day82";
-import Day83 from "@/components/questions1/day83";
-import Day84 from "@/components/questions1/day84";
-import Day85 from "@/components/questions1/day85";
-import Day86 from "@/components/questions1/day86";
-import Day87 from "@/components/questions1/day87";
-import Day88 from "@/components/questions1/day88";
-import Day89 from "@/components/questions1/day89";
-import Day90 from "@/components/questions1/day90";
-import Day91 from "@/components/questions1/day91";
-import Day92 from "@/components/questions1/day92";
-import Day93 from "@/components/questions1/day93";
-import Day94 from "@/components/questions1/day94";
-import Day95 from "@/components/questions1/day95";
-import Day96 from "@/components/questions1/day96";
-import Day97 from "@/components/questions1/day97";
-import Day98 from "@/components/questions1/day98";
-import Day99 from "@/components/questions1/day99";
-import Day100 from "@/components/questions1/day100";
->>>>>>> b8b18e148673efd8dca4719d7ec3f1a74605fcb2
+import Day51 from "@/components/questions/day51";
+import Day52 from "@/components/questions/day52";
+import Day53 from "@/components/questions/day53";
+import Day54 from "@/components/questions/day54";
+import Day55 from "@/components/questions/day55";
+import Day56 from "@/components/questions/day56";
+import Day57 from "@/components/questions/day57";
+import Day58 from "@/components/questions/day58";
+import Day59 from "@/components/questions/day59";
+import Day60 from "@/components/questions/day60";
+import Day61 from "@/components/questions/day61";
+import Day62 from "@/components/questions/day62";
+import Day63 from "@/components/questions/day63";
+import Day64 from "@/components/questions/day64";
+import Day65 from "@/components/questions/day65";
+import Day66 from "@/components/questions/day66";
+import Day67 from "@/components/questions/day67";
+import Day68 from "@/components/questions/day68";
+import Day69 from "@/components/questions/day69";
+import Day70 from "@/components/questions/day70";
+import Day71 from "@/components/questions/day71";
+import Day72 from "@/components/questions/day72";
+import Day73 from "@/components/questions/day73";
+import Day74 from "@/components/questions/day74";
+import Day75 from "@/components/questions/day75";
+import Day76 from "@/components/questions/day76";
+import Day77 from "@/components/questions/day77";
+import Day78 from "@/components/questions/day78";
+import Day79 from "@/components/questions/day79";
+import Day80 from "@/components/questions/day80";
+import Day81 from "@/components/questions/day81";
+import Day82 from "@/components/questions/day82";
+import Day83 from "@/components/questions/day83";
+import Day84 from "@/components/questions/day84";
+import Day85 from "@/components/questions/day85";
+import Day86 from "@/components/questions/day86";
+import Day87 from "@/components/questions/day87";
+import Day88 from "@/components/questions/day88";
+import Day89 from "@/components/questions/day89";
+import Day90 from "@/components/questions/day90";
+import Day91 from "@/components/questions/day91";
+import Day92 from "@/components/questions/day92";
+import Day93 from "@/components/questions/day93";
+import Day94 from "@/components/questions/day94";
+import Day95 from "@/components/questions/day95";
+import Day96 from "@/components/questions/day96";
+import Day97 from "@/components/questions/day97";
+import Day98 from "@/components/questions/day98";
+import Day99 from "@/components/questions/day99";
+import Day100 from "@/components/questions/day100";
 
 export default function Challenges() {
   return (
@@ -115,7 +112,6 @@ export default function Challenges() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Day1 />
           <Day2 />
-<<<<<<< HEAD
           <Day3 />
           <Day4 />
           <Day5 />
@@ -144,7 +140,6 @@ export default function Challenges() {
           <Day28 />
           <Day29 />
           <Day30 />
-          <Day30 />
           <Day31 />
           <Day32 />
           <Day33 />
@@ -163,40 +158,8 @@ export default function Challenges() {
           <Day46 />
           <Day47 />
           <Day48 />
-          <Day48 />
           <Day49 />
           <Day50 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-          <Day1 />
-=======
-          <Day2 />
-          <Day2 />
           <Day51 />
           <Day52 />
           <Day53 />
@@ -247,7 +210,6 @@ export default function Challenges() {
           <Day98 />
           <Day99 />
           <Day100 />
->>>>>>> b8b18e148673efd8dca4719d7ec3f1a74605fcb2
         </div>
       </main>
 
