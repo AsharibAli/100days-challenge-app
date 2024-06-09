@@ -58,9 +58,11 @@ const Day17 = () => {
                     <strong> ➡️ Explanation of Question 49 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+This code defines a function logHobbies that accepts multiple hobbies as arguments, loops through each hobby to log a statement for it, and then calls the function with three hobbies: reading, coding, and cycling.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -120,10 +122,9 @@ logHobbies("reading", "coding", "cycling");
                     <strong>➡️ Explanation of Question 50</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code defines a multiline string using template literals to describe an ideal day, which includes jogging, coding on a personal project, and reading a good book, and then logs this string to the console.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -181,9 +182,7 @@ console.log(myIdealDay);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  This code refactors a function that calculates the area of a rectangle from a traditional function declaration to an arrow function, and then logs the result of calculating the area with a width of 5 and a height of 7 to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

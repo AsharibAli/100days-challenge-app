@@ -58,9 +58,11 @@ const Day30 = () => {
                     <strong> ➡️ Explanation of Question 88 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The convertStringToNumber function utilizes the Number function to convert a string into a numerical value. In the example, the string "123" is transformed into the number 123. Now, it can be treated as a numerical value rather than just text.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -115,10 +117,10 @@ console.log(convertStringToNumber("123"));
                     <strong>➡️ Explanation of Question 89</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The roundToTwoDecimalPlaces function first uses the toFixed method to round the number to two decimal places and returns a string representation of that number. Then, it converts that string back to a number using the Number function, ensuring that the result is a number. In the example, π (3.14159) is rounded off to 3.14, simplifying its representation.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -174,9 +176,8 @@ console.log(roundToTwoDecimalPlaces(3.14159)); // Outputs 3.14
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+
+The generateRandomNumber function utilizes Math.random() to generate a random floating-point number between 0 (inclusive) and 1 (exclusive). Then, it's scaled up to a range from 1 to 10 using multiplication and addition, and finally rounded down using Math.floor() to ensure it's an integer. Each time you call this function, you'll likely get a different random number between 1 and 10.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

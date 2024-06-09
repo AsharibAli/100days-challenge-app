@@ -57,9 +57,11 @@ const Day39 = () => {
                     <strong> ➡️ Explanation of Question 115 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The logDayOfWeek function determines the day of the week based on the input number (1-7) using a switch statement. Each case represents a day of the week, with case 1 corresponding to Sunday, case 2 to Monday, and so on. If the input number does not match any of the cases, the default case logs "Invalid day number". This approach provides a clear and concise way to map numbers to their respective days of the week, enhancing code readability and maintainability.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -139,10 +141,10 @@ logDayOfWeek(3); // Outputs: Tuesday
                     <strong>➡️ Explanation of Question 116</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The logSeason function determines the season based on the input month using a switch statement. Each case groups together the months belonging to a particular season and logs the corresponding season name. For example, months 12, 1, and 2 represent winter, months 3, 4, and 5 represent spring, and so on. If the input month does not match any of the cases, the default case logs "Invalid month". This method simplifies the logic by categorizing months into seasons, making the code more organized and readable.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -221,9 +223,8 @@ logSeason(4); // Outputs: Spring
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  
+The evaluateGrade function takes a grade as input and uses a switch statement to determine the corresponding remark. Each case matches a specific grade ("A", "B", "C", "D", or "F") and logs a remark accordingly. If the input grade does not match any of the cases, the default case logs "Invalid grade". This approach provides a concise and readable way to handle multiple possible cases for a given input.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

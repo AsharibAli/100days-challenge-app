@@ -59,9 +59,11 @@ const Day18 = () => {
                     <strong> ➡️ Explanation of Question 52 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+This code sets up details about a smartphone, including its make, model, and specifications such as storage, screen size, and battery life, then logs the entire smartphone object to the console to display its setup.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -123,10 +125,10 @@ console.log(smartphone);
                     <strong>➡️ Explanation of Question 53</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+This code defines an object developerSkills that lists a programmer's skills in languages, frameworks, and tools, extracts specific skills from each category using destructuring, and logs the first skill from each category to the console.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -190,9 +192,8 @@ console.log(
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+
+This code defines a function createObjectWithDynamicKey that creates an object with a key-value pair, where the key is dynamically set based on the provided argument, then demonstrates this by creating an object for a user's theme preference and logging it to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

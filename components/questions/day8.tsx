@@ -59,9 +59,10 @@ const Day8 = () => {
                     <strong> ➡️ Explanation of Question 22 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code initializes an array "friends" with the names "Alice", "Bob", and "Charlie". It attempts to access an element at index 3 using "friends[3]", which is intentionally incorrect as arrays are zero-indexed, resulting in an out-of-bounds error. Then, it corrects this error by assigning the value "Charlie" to the element at index 2, thus replacing the incorrect operation.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -118,10 +119,29 @@ friends[2] = "Charlie"; // Correcting the error by accessing a valid index.
                     <strong>➡️ Explanation of Question 23</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                  
+
+1. Test 1: Evaluates to True because the variable "car" is assigned the value "subaru", and the comparison using "===" checks for both value and type equality.
+
+2. Test 2: Also evaluates to True because the variable "car" is not assigned the value "toyota", so the comparison using "!==" is true.
+
+3. Test 3: Evaluates to False because JavaScript is case-sensitive, so "subaru" is not equal to "Subaru".
+
+4. Test 4: Evaluates to True because "car" is equal to "subaru" and not equal to "toyota".
+
+5. Test 5: Evaluates to True because "car" is not equal to "Subaru".
+
+6. Test 6: Evaluates to False because "subaru" is not equal to "Subaru".
+
+7. Test 7: Evaluates to False because "car" is not assigned the value "toyota".
+
+8. Test 8: Evaluates to True because "car" is not "subaru" but also not "toyota".
+
+9. Test 9: Evaluates to False because "car" is not assigned the value "ford".
+
+10. Test 10: Evaluates to False because "car" is assigned the value "subaru".
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -183,9 +203,29 @@ console.log(car == "toyota");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                 
+
+1. Testing equality with strings:
+   - "apple" == "apple" evaluates to True because both strings are equal.
+   - "apple" == "Apple" evaluates to False because JavaScript is case-sensitive.
+
+2. Testing with lower case:
+   - "Apple".toLowerCase() == "apple" evaluates to True because "Apple" converted to lowercase is equal to "apple".
+
+3. Numerical tests:
+   - 10 > 5 evaluates to True because 10 is greater than 5.
+   - 2 < 1 evaluates to False because 2 is not less than 1.
+
+4. Tests using 'and' and 'or' operators:
+   - true && false evaluates to False because both conditions must be True for the 'and' operator.
+   - true || false evaluates to True because at least one condition must be True for the 'or' operator.
+
+5. Test whether an item is in an array:
+   - fruits.includes("apple") evaluates to True because "apple" is included in the "fruits" array.
+
+6. Test whether an item is not in an array:
+   - !fruits.includes("mango") evaluates to True because "mango" is not included in the "fruits" array, and the logical NOT operator (!) returns the opposite Boolean value.
+
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

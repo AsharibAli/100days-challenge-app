@@ -58,9 +58,11 @@ const Day27 = () => {
                     <strong> ➡️ Explanation of Question 79 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The code initializes an object car with properties like make, model, and year. Using dot notation (car.model), it accesses and logs the value of the model property of the car object, which is "Corolla", to the console.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -119,10 +121,9 @@ console.log(car.model); // Outputs: Corolla
                     <strong>➡️ Explanation of Question 80</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code snippet begins with a car object representing a Toyota Corolla manufactured in 2020. It then adds a new property color with the value "blue" to the car object and updates the year property to 2021. Finally, it logs the updated car object to the console, reflecting the changes made.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -184,9 +185,8 @@ console.log(car); // Outputs the car object
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The logObjectProperties function iterates over each property in the provided object and logs its name and value to the console. When called with an object representing a car with properties like make, model, year, and color, it displays each piece of information stored about the car.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

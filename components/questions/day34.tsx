@@ -54,9 +54,11 @@ const Day34 = () => {
                     <strong> ➡️ Explanation of Question 100 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The code calculates the square root of 144 using Math.sqrt(). It assigns the result to the variable squareRoot and then logs the sentence "The square root of 144 is [result]." to the console, where [result] is replaced by the value of squareRoot.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -104,10 +106,10 @@ console.log(\`The square root of 144 is \${squareRoot}.\`);
                     <strong>➡️ Explanation of Question 101</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The code generates a random integer between 1 and 10 using Math.random() and Math.floor(). It multiplies Math.random() by 10 to get a random floating-point number between 0 (inclusive) and 10 (exclusive). Then, it adds 1 to the result to ensure the final integer falls between 1 and 10. Finally, it logs the random integer to the console.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -165,9 +167,8 @@ to create a random integer within our range.
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The code calculates the absolute difference between -5 and 5 using the Math.abs method. It subtracts 5 from -5 to get -10 and then takes the absolute value of -10, resulting in 10. Finally, it logs the result, 10, to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

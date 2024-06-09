@@ -54,9 +54,10 @@ const Day43 = () => {
                     <strong> ➡️ Explanation of Question 127 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The code shows two ways to define the same function: a traditional function expression traditionalFunction and an arrow function arrowFunction. Both functions take two parameters a and b and return their sum. The traditional function uses the function keyword and curly braces with an explicit return. The arrow function uses a shorter syntax with parameters in parentheses, an arrow =>, and an implicit return (no return keyword needed for one-line functions). Both traditionalFunction(5, 3) and arrowFunction(5, 3) return 8, showing that these functions are functionally equivalent but with different syntax.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -115,10 +116,9 @@ console.log(arrowFunction(5, 3)); // Outputs: 8
                     <strong>➡️ Explanation of Question 128</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code defines an arrow function multiplyParameters that uses the rest parameter syntax ...numbers to accept any number of numeric arguments as an array numbers. It then uses the reduce method to multiply all the numbers together, starting with an initial value of 1. When called with multiplyParameters(2, 3, 4), it computes 2 * 3 * 4 and returns 24. This demonstrates how rest parameters and arrow functions can create concise, flexible functions that operate on a variable number of arguments.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -173,9 +173,7 @@ console.log(multiplyParameters(2, 3, 4)); // Outputs: 24
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  The code defines an object traditionalVsArrow with a value property and two methods: traditionalFunction (a regular function) and arrowFunction (an arrow function). In traditionalFunction, this refers to the traditionalVsArrow object, so this.value correctly logs "traditionalVsArrow value". However, in arrowFunction, this is not bound to the object but instead inherits from the scope where traditionalVsArrow was defined. If there's no value property in that outer scope, this.value will be undefined. This demonstrates a key difference: regular functions have their own this context, while arrow functions inherit this from their enclosing scope.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

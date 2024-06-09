@@ -58,9 +58,10 @@ const Day7 = () => {
                     <strong> ➡️ Explanation of Question 19 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code initializes an array "guests" containing the names of guests: "Albert Einstein", "Marie Curie", "Leonardo da Vinci", "Isaac Newton", and "Charles Darwin". It then logs a message using template literals to indicate the number of people invited to dinner: "I am inviting [number of guests] people to dinner."
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -112,10 +113,9 @@ console.log(\`I am inviting \${guests.length} people to dinner.\`);
                     <strong>➡️ Explanation of Question 20</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code initializes an array "countries" with country names like "Japan", "Canada", "New Zealand", and "Iceland". Then, it logs a message indicating the list of countries the user would like to visit: "Countries I'd like to visit:" followed by the list of countries stored in the "countries" array.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -165,9 +165,7 @@ console.log("Countries I'd like to visit:", countries);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+This code initializes an object "book" with properties such as title, author, and yearPublished, representing a book titled "The Hobbit" by J.R.R. Tolkien, published in 1937. It then logs a message using template literals to display information about the book: "Book Info: [book title] by [book author], published in [year published]".
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

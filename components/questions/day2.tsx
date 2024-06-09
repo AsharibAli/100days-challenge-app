@@ -60,9 +60,10 @@ const Day2 = () => {
                     <strong> ➡️ Explanation of Question 4 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.
+                    {`
+                    This code prints a famous quote by Albert Einstein to the
+                    console: "Albert Einstein once said, 'A person who never
+                    made a mistake never tried anything new.'"`}
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
@@ -113,15 +114,13 @@ never tried anything new.”');
                     <strong>➡️ Explanation of Question 5</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code defines a variable famous_person with the value "Albert Einstein" and constructs a message using template literals that incorporates this variable. The message, "Albert Einstein once said, 'A person who never made a mistake never tried anything new.'" is then printed to the console.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
 let famous_person: string = "Albert Einstein";
+
 let message: string = \`\${famous_person} once said, “A person 
 who never made a mistake never tried anything new.”\`\;
 console.log(message);
@@ -170,9 +169,7 @@ console.log(message);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                This code defines a variable "myName" with the value "\t\n Asharib \t\n", which includes tab and newline characters. It then prints the original value, followed by the trimmed version of the string, which removes the leading and trailing whitespace, to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

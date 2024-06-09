@@ -58,9 +58,11 @@ const Day22 = () => {
                     <strong> ➡️ Explanation of Question 64 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The combineStringAndNumber function concatenates a given text and number into a single string. When tested with "Age: " and 30, it logs "Age: 30", demonstrating the combination of the text and number into one cohesive string.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -117,10 +119,10 @@ console.log(combineStringAndNumber("Age: ", 30)); // Shows "Age: 30"
                     <strong>➡️ Explanation of Question 65</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+This remainder function calculates the remainder of dividing the first number by the second number using the modulus operator (%). When tested with 5 divided by 2, it logs 1, indicating the leftover after division, which is 1 in this case.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -178,9 +180,7 @@ console.log(remainder(5, 2)); // Shows 1
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  This function checkBothTrue evaluates whether both inputs are true, returning true only if both val1 and val2 are true. When tested with true and false, it logs false because one of the inputs is false, leading to a false result overall.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

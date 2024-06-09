@@ -58,9 +58,10 @@ const Day3 = () => {
                     <strong> ➡️ Explanation of Question 7 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code performs and prints the results of four basic arithmetic operations: addition (5 + 3), subtraction (10 - 2), multiplication (4 * 2), and division (16 / 2). Each operation's result is logged to the console.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -114,10 +115,8 @@ console.log(16 / 2); // Division
                     <strong>➡️ Explanation of Question 8</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`// (Refer to the answer for Question 7, because it roughly
+serves the same purpose.)`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -167,9 +166,7 @@ serves the same purpose.)
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  This code defines a variable "favoriteNumber" with the value 8 and then prints the message "My favorite number is 8." to the console using template literals for string interpolation.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

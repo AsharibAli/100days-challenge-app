@@ -61,9 +61,12 @@ const Day9 = () => {
                     <strong> ➡️ Explanation of Question 25 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+In the version that passes, the variable "alien_color" is initially set to "green". The condition checks if "alien_color" is equal to "green", which evaluates to True, so the message "You just earned 5 points!" is logged to the console.
+
+In the version that fails, after reassigning "alien_color" to "red", the condition checks if "alien_color" is equal to "green", which evaluates to False. Since the condition is false, there is no output.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -127,10 +130,9 @@ if (alien_color == "green") {
                     <strong>➡️ Explanation of Question 26</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`In the version that runs the if block, the variable "alien_color" is set to "green". The condition checks if "alien_color" is equal to "green", which evaluates to True. Therefore, the message "You just earned 5 points for shooting the alien" is logged to the console.
+
+In the version that runs the else block, after reassigning "alien_color" to "yellow", the condition checks if "alien_color" is equal to "green", which evaluates to False. Since the condition is false, the code executes the else block, and the message "You just earned 10 points!" is logged to the console.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -204,9 +206,18 @@ if (alien_color == "green") {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+In the code, the variable "alien_color" is initially set to "pink".
+
+In the "Green alien version", after reassigning "alien_color" to "green", the code checks the value of "alien_color":
+- Since "alien_color" is "green", it logs "You earned 5 points."
+
+In the "Yellow alien version", after reassigning "alien_color" to "yellow", the code checks the value of "alien_color":
+- Since "alien_color" is "yellow", it logs "You earned 10 points."
+
+In the "Red alien version", after reassigning "alien_color" to "red", the code checks the value of "alien_color":
+- Since "alien_color" is "red", it logs "You earned 15 points."
+
+The "export {}" statement at the end is used to prevent errors from redeclaration.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

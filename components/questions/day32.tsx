@@ -57,9 +57,11 @@ const Day32 = () => {
                     <strong> ➡️ Explanation of Question 94 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The words array contains strings, and the .map() method is used to create a new array lengths containing the length of each word from the words array. When logged, it outputs [5, 5, 10, 10], indicating the length of each word in the original array.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -113,10 +115,10 @@ console.log(lengths); // Outputs: [5, 5, 10, 10]
                     <strong>➡️ Explanation of Question 95</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The filterGreaterThanTen function takes an array of numbers and uses the filter method to create a new array containing only the numbers greater than 10. When called with the array [5, 10, 15, 20, 25], it outputs [15, 20, 25], which are the numbers greater than 10 in the original array.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -172,9 +174,8 @@ console.log(filterGreaterThanTen(numbers)); // Outputs: [15, 20, 25]
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                 
+The calculateSum function takes an array of numbers and uses the reduce method to add them all together, resulting in a single sum value. When called with the array [1, 2, 3, 4, 5], it outputs 15, which is the sum of all the numbers in the array.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

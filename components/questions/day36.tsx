@@ -56,9 +56,11 @@ const Day36 = () => {
                     <strong> ➡️ Explanation of Question 106 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The isLeapYear function efficiently determines whether a given year is a leap year or not. It evaluates whether the year satisfies the conditions for a leap year: it must be divisible by 4 but not by 100 unless it is also divisible by 400. For example, isLeapYear(2020) returns true because 2020 is divisible by 4 but not by 100, whereas isLeapYear(1900) returns false because although it is divisible by 4, it is also divisible by 100 without being divisible by 400.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -115,10 +117,9 @@ console.log(isLeapYear(1900)); // Outputs: false
                     <strong>➡️ Explanation of Question 107</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The isDivisibleByTwoAndThree function determines whether a number is divisible by both 2 and 3. It achieves this by using the modulo operator (%) to check if the remainder of dividing the number by 2 and 3 is zero. If both conditions are met, the function returns true; otherwise, it returns false. For instance, when evaluating isDivisibleByTwoAndThree(12), it returns true because 12 is divisible by both 2 and 3, while for isDivisibleByTwoAndThree(14), it returns false since 14 is not divisible by 3.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -175,9 +176,8 @@ console.log(isDivisibleByTwoAndThree(14)); // Outputs: false
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The areStringsEqualIgnoreCase function compares two strings while ignoring their case sensitivity. It achieves this by converting both strings to lowercase using the toLowerCase method before comparing them. As a result, it returns true if the lowercase versions of the strings are identical and false otherwise. For instance, when comparing "hello" and "Hello," it returns true, whereas comparing "world" and "Word" returns false. This ensures that case differences do not affect the comparison result.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

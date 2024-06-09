@@ -64,9 +64,12 @@ const Day11 = () => {
                     <strong> ➡️ Explanation of Question 31 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code initializes an empty array "usernames" and checks if it's empty using the "length" property. Since the array is empty (length === 0), the code logs "We need to find some users!" to the console.
+
+The code inside the "else" block is not executed because the array is empty, ensuring that only the message "We need to find some users!" is printed.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -130,15 +133,16 @@ if(usernames.length === 0){
                     <strong>➡️ Explanation of Question 32</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code initializes two arrays: "current_users" and "new_users", containing lists of current and new users, respectively. It then iterates over each element in the "new_users" array using the "forEach" method.
+
+- For each new user, it checks if there's any existing user with a similar name, ignoring the case differences (by converting both to lowercase). If there's a match, it logs "[newUser] will need to enter a new username." indicating that the username is not available.
+- If there's no match, it logs "[newUser] is available." indicating that the username is available for use.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
 let current_users: string[] = ["user1", "admin", "user3", "user4", "user5"];
+
 let new_users: string[] = ["User1", "User6", "user7", "admin", "User9"];
 
 new_users.forEach((newUser) => {
@@ -202,9 +206,14 @@ new_users.forEach((newUser) => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+This code initializes an array "numbers" containing sequential numbers from 1 to 9. It then iterates over each element in the array using the "forEach" method.
+
+- For each number, it determines the appropriate suffix ("st", "nd", "rd", or "th") based on the number's value.
+- If the number is 1, it sets the suffix to "st".
+- If the number is 2, it sets the suffix to "nd".
+- If the number is 3, it sets the suffix to "rd".
+- For all other numbers, it defaults to "th".
+- It then logs each number along with its respective suffix to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

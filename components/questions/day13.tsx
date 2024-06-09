@@ -59,9 +59,16 @@ const Day13 = () => {
                     <strong> ➡️ Explanation of Question 37 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This function "make_shirt" defines default values for its parameters. If no arguments are provided, it defaults to a "large" size and the message "I love TypeScript". If only one argument is provided, it takes that as the size and defaults the message to "I love TypeScript". If both arguments are provided, it uses them as the size and message, respectively.
+
+The function then logs messages using template literals to indicate the process of making a t-shirt with the provided size and message printed on it. 
+
+- make_shirt(); will log "Making a large t-shirt with the message "I love TypeScript" printed on it."
+- make_shirt("medium"); will log "Making a medium t-shirt with the message "I love TypeScript" printed on it."
+- make_shirt("small", "Dive into Coding"); will log "Making a small t-shirt with the message "Dive into Coding" printed on it."
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -120,10 +127,11 @@ make_shirt("small", "Dive into Coding"); // Custom message, small size
                     <strong>➡️ Explanation of Question 38</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This function describe_city takes two parameters: city and country, with "Pakistan" set as the default for country. It logs a message indicating the city and its associated country.
+
+For "Karachi", it logs "Karachi is in Pakistan."
+For "Lahore", it logs "Lahore is in Pakistan."
+For "Tokyo" and "Japan", it logs "Tokyo is in Japan."`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -184,9 +192,11 @@ describe_city("Tokyo", "Japan");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+This function city_country takes two parameters: city and country, and returns a string combining both values with a comma in between.
+
+- console.log(city_country("Lahore", "Pakistan")); prints "Lahore, Pakistan".
+- console.log(city_country("Tokyo", "Japan")); prints "Tokyo, Japan".
+- console.log(city_country("Paris", "France")); prints "Paris, France".
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

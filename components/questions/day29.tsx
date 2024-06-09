@@ -58,9 +58,11 @@ const Day29 = () => {
                     <strong> ➡️ Explanation of Question 85 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The findCodePosition function searches for the first occurrence of the substring "code" within a given string using the indexOf method. For example, when applied to the sentence "Learn to code with JavaScript", it returns the starting position of "code", which is 9.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -117,10 +119,10 @@ console.log(findCodePosition("Learn to code with JavaScript"));
                     <strong>➡️ Explanation of Question 86</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The hasJavaScript function checks whether a given string contains the substring "JavaScript" using the includes method. For instance, when applied to the text "I love coding in JavaScript!", it returns true because the string includes "JavaScript".
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -177,9 +179,8 @@ console.log(hasJavaScript("I love coding in JavaScript!"));
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The extractFirstTenChars function extracts the first 10 characters from a given string using the substring method. When applied to the sentence "Hello, JavaScript world!", it returns "Hello, Java", providing only the initial 10 characters of the input string.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

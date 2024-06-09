@@ -56,9 +56,11 @@ const Day35 = () => {
                     <strong> ➡️ Explanation of Question 103 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The getRandomBoolean() function generates a random boolean value, which can be either true or false. It achieves this by utilizing Math.random() to generate a random number between 0 and 1. If the generated number is greater than 0.5, it returns true; otherwise, it returns false. This results in a random boolean value being output each time the function is called.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -114,10 +116,10 @@ console.log(getRandomBoolean());
                     <strong>➡️ Explanation of Question 104</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The getRandomHexColor() function creates a random hexadecimal color code, which is commonly used in web design and development. It generates a random number up to 0xffffff, representing the maximum value that can be expressed in hexadecimal with six characters. Then, it converts this number to a hexadecimal string using toString(16). If necessary, it pads the string with zeros to ensure it has six characters. Finally, it returns the hexadecimal color code, starting with "#" to indicate its format.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -180,9 +182,8 @@ console.log(getRandomHexColor());
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The function rollDice() generates a random number between 1 and 6, simulating the outcome of rolling a standard six-sided dice. It utilizes Math.random() to obtain a decimal between 0 and 1, multiplies it by 6 to scale the range, then adds 1 to shift it to the desired range of 1 to 6. Finally, it returns the result, representing the outcome of the dice roll.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

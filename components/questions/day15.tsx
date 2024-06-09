@@ -61,9 +61,16 @@ const Day15 = () => {
                     <strong> ➡️ Explanation of Question 43 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+In this script, there are two functions:
+
+1. make_great: This function takes an array of magician names as a parameter. It creates a new array greatMagicians and iterates through each name in the input array, appending " the Great" to each magician's name and pushing it to the greatMagicians array. Finally, it returns the modified array.
+
+2. show_magicians: This function takes an array of magician names as a parameter and logs each magician's name to the console.
+
+The script then creates a new array greatMagicians by calling the make_great function with a copy of the original magicians array using the slice method. It then logs the original and modified magician names to the console using the show_magicians function, showing both the original names and the modified names separately.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -137,10 +144,13 @@ show_magicians(greatMagicians); // Shows modified names
                     <strong>➡️ Explanation of Question 44</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The function make_sandwich takes a variable number of string arguments and logs a message indicating the ingredients of the sandwich being made.
+
+- make_sandwich("ham", "cheese"); logs "Making a sandwich with: ham, cheese."
+- make_sandwich("turkey", "lettuce", "tomato"); logs "Making a sandwich with: turkey, lettuce, tomato."
+- make_sandwich("avocado", "sprouts", "mustard", "mayo"); logs "Making a sandwich with: avocado, sprouts, mustard, mayo."
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -200,9 +210,10 @@ make_sandwich("avocado", "sprouts", "mustard", "mayo");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  The make_car function creates a car object with specified properties such as manufacturer and model. It also allows for additional options to be provided as key-value pairs using an array of tuples.
+
+- console.log(make_car("Toyota", "Carolla", ["color", "red"], ["year", 2020])); creates a car object for Toyota Carolla with color "red" and year "2020".
+- console.log(make_car("Ford", "Fiesta", ["color", "blue"], ["sunroof", true])); creates a car object for Ford Fiesta with color "blue" and a sunroof option set to true.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

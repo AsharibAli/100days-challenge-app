@@ -58,9 +58,10 @@ const Day19 = () => {
                     <strong> ➡️ Explanation of Question 55 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code starts with a list of numbers, then doubles each number using the map method and an arrow function, storing the doubled numbers in a new array called doubledNumbers. Finally, it logs the doubledNumbers array to the console, showing the list of doubled numbers.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -116,10 +117,8 @@ console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]
                     <strong>➡️ Explanation of Question 56</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+This code initializes a mixed array containing various data types, then filters out only the strings from the array using the filter method and the typeof operator, storing them in a new array called stringsArray. Finally, it logs the stringsArray to the console, displaying only the words from the original mixed array.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -176,9 +175,8 @@ console.log(stringsArray); // Output: ["apple", "banana", "carrot"]
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+
+This code calculates the average grade from a list of grades by summing them up using the reduce method and then dividing the total by the number of grades. Finally, it logs the average grade to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

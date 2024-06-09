@@ -54,9 +54,10 @@ const Day40 = () => {
                     <strong> ➡️ Explanation of Question 118 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The provided code is a simple for loop that iterates 10 times, starting with i as 1 and incrementing it by 1 in each iteration until i becomes greater than 10. During each iteration, the current value of i is logged to the console, resulting in the numbers 1 through 10 being printed.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -106,10 +107,9 @@ for (let i = 1; i <= 10; i++) {
                     <strong>➡️ Explanation of Question 119</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code initializes a variable count to 0, then uses a while loop to print "Hello, World!" to the console five times. The loop continues as long as count is less than 5, incrementing count by 1 after each iteration.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -165,9 +165,8 @@ while (count < 5) {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                 
+The code snippet defines an array named favoriteMovies, which contains the titles of some favorite movies. It then utilizes a for...of loop to iterate through each element in the favoriteMovies array. During each iteration, the loop logs the name of the current movie to the console. This approach provides a concise and readable way to loop through the array and perform an action (in this case, logging each movie name) for each element.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

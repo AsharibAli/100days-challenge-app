@@ -63,9 +63,14 @@ const Day10 = () => {
                     <strong> ➡️ Explanation of Question 28 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code sets the variable "age" to 25 and then checks the value of "age" against different age ranges using conditional statements.
+
+- Since 25 falls between 20 and 65, the condition "age < 65" evaluates to true, so it logs "The person is an adult." to the console.
+
+This code effectively categorizes a person based on their age into one of the following groups: baby, toddler, kid, teenager, adult, or elder. In this case, the person is categorized as an adult.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -133,10 +138,11 @@ if (age < 2) {
                     <strong>➡️ Explanation of Question 29</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code initializes an array "favorite_fruits" containing strings like "apples", "bananas", and "cherries". It then checks if "bananas" are included in the array using the "includes" method. If so, it logs "You really like bananas!" to the console. Similarly, it checks if "apples" are included in the array and logs "You really like apples!" if true.
+
+This demonstrates how to check for specific values within an array and execute corresponding actions based on their presence.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -202,9 +208,10 @@ if (favorite_fruits.includes("apples")) {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  This code initializes an array "usernames" containing strings like "admin", "user1", "user2", "user3", and "user4". It then iterates over each element in the array using the "forEach" method.
+
+- If the current username is "admin", it logs "Hello admin, would you like to see a status report?" to the console.
+- For all other usernames, it logs a message using template literals, greeting the user by their username: "Hello [username], thank you for logging in again."
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

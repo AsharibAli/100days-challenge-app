@@ -63,9 +63,17 @@ const Day6 = () => {
                     <strong> ➡️ Explanation of Question 16 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The code initially defines an array "guests" containing the names of guests: "Albert Einstein", "Marie Curie", and "Leonardo Vinci". It then logs the message "Great news! I found a bigger dinner table!" to indicate more guests can be accommodated.
+
+Next, it adds additional guests to the "guests" array using various array methods:
+- "unshift" adds "Isaac Newton" to the beginning of the array.
+- "splice" inserts "Charles Darwin" into the middle of the array (at an index equal to half of its length).
+- "push" adds "Ada Lovelace" to the end of the array.
+
+Finally, it prints personalized dinner invitations to each guest, including the newly added guests, using a "forEach" loop with template literals for string interpolation.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -126,10 +134,11 @@ guests.forEach(guest => {
                     <strong>➡️ Explanation of Question 17</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    In the first part, the code initializes an array "guests" with names such as "Albert Einstein", "Marie Curie", and "Leonardo Vinci". Then, it logs "Great news! I found a bigger dinner table!" indicating more guests can be accommodated. Additional guests are added to the array using "unshift" to add "Isaac Newton" at the beginning, "splice" to insert "Charles Darwin" in the middle, and "push" to append "Ada Lovelace" to the end. Each guest is then invited to dinner with a personalized message using "forEach" loop and string interpolation.
+
+In the second part, the code logs "Unfortunately, I can only invite two people for dinner." It iterates through the "guests" array using a "while" loop, removing guests until only two remain, logging a message for each removed guest. Afterward, each remaining guest is informed that they are still invited. Finally, the "guests" array is emptied using "splice" and logged to show an empty list.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -210,9 +219,15 @@ console.log(guests); // Shows an empty list
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   The code initializes an array "places" with countries like "NZ", "Iceland", "Japan", "Switzerland", and "Norway". It then demonstrates various methods to manipulate the order of elements in the array.
+
+It first logs the "Original order" of the places array. Then, it logs the "Alphabetical order" by creating a copy of the array, sorting it alphabetically, and displaying it. Afterward, it logs the "Original order" again to show that the original array remains unchanged.
+
+Similarly, it logs the "Reverse alphabetical order" by creating a copy of the array, sorting it alphabetically, and then reversing it. The "Original order" is logged again to demonstrate that the original array remains unchanged.
+
+Next, it reverses the order of elements in the "places" array and logs it as "Reversed order". Then, it reverts the order back to the original and logs it again.
+
+Finally, it sorts the "places" array alphabetically and logs it as "Alphabetical order". Then, it reverses the order to show "Reverse alphabetical order".
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

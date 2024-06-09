@@ -57,9 +57,10 @@ const Day20 = () => {
                     <strong> ➡️ Explanation of Question 58 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This program defines a function averageScore that calculates the average of scores provided as arguments using the spread syntax, then logs the average score to the console for a specific example of four scores. The function adds up all the scores and divides by the number of scores to find the average.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -116,10 +117,10 @@ console.log(averageScore(80, 90, 100, 70)); // Shows the average score
                     <strong>➡️ Explanation of Question 59</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+This program creates a function makeAdder that generates and returns a new function, which adds a specific number to any number passed to it. In this case, it creates a magic box addFive that adds 5 to any number provided. When we put 10 in the box, it gives us 15, as demonstrated by addFive(10).
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -179,9 +180,7 @@ console.log(addFive(10)); // If we put 10 in the box, it gives us 15
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+This program creates a self-setup profile userProfile using an immediately invoked function expression (IIFE), which encapsulates the user's details like name and age. It returns an object with a method displayInfo that logs the user's name and age to the console when called. By invoking userProfile.displayInfo(), it provides information about the user.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

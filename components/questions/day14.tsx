@@ -67,9 +67,14 @@ const Day14 = () => {
                     <strong> ➡️ Explanation of Question 40 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This function make_album creates an album object with properties artist and title. If a tracks parameter is provided, it adds the tracks property to the album object.
+
+- console.log(make_album("Artist One", "The First Album")); prints { "artist": "Artist One", "title": "The First Album" }.
+- console.log(make_album("Artist Two", "The Second Album")); prints { "artist": "Artist Two", "title": "The Second Album" }.
+- console.log(make_album("Artist Three", "The Third Album", 12)); prints { "artist": "Artist Three", "title": "The Third Album", "tracks": 12 }.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -127,10 +132,11 @@ console.log(make_album("Artist Three", "The Third Album", 12));
                     <strong>➡️ Explanation of Question 41</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code defines an array magicians containing strings representing different magicians' names. It then defines a function show_magicians that takes an array of magicians as a parameter.
+
+Within the show_magicians function, it iterates over each magician in the array using the forEach method and logs each magician's name to the console.
+
+Finally, it calls the show_magicians function with the magicians array as an argument, resulting in the names of all magicians being printed to the console.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -189,9 +195,13 @@ show_magicians(magicians);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   This script starts by defining an array magicians containing strings representing different magicians' names. It then defines two functions:
+
+1. show_magicians: This function takes an array of magician names as a parameter and iterates through each name, logging it to the console.
+
+2. make_great: This function also takes an array of magician names as a parameter. It iterates through each name, appending " the Great" to each magician's name.
+
+After defining these functions, the script calls make_great with the magicians array as an argument. This function modifies the original array by adding " the Great" to each magician's name. Finally, it calls show_magicians with the modified magicians array as an argument, resulting in the updated names of all magicians being printed to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

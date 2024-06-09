@@ -55,9 +55,11 @@ const Day1 = () => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     <strong>What is Nodejs? </strong>
-                    Node.js is a free, open-source, cross-platform JavaScript
+                    {`
+Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
+                    apps, command line tools and scripts.
+`}{" "}
                     <strong>
                       <a href="https://nodejs.org/en" target="_blank">
                         Download
@@ -127,10 +129,9 @@ const Day1 = () => {
                     <strong>➡️ Explanation of Question 2</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code defines a variable myName with the value "Asharib" and then prints a message to the console saying, "Hello Asharib, Want to learn some TypeScript today?" using template literals for string interpolation.
+
+`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -180,9 +181,8 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+
+This code defines a variable myName with the value "Asharib" and demonstrates three different string manipulation operations in TypeScript: converting the string to lowercase, converting it to uppercase, and capitalizing the first letter while making the rest of the string lowercase. The results of these operations are printed to the console.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

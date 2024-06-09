@@ -58,9 +58,10 @@ const Day23 = () => {
                     <strong> ➡️ Explanation of Question 67 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The addNumberAndString function adds a number and a string that represents a number. It first converts the string to a number and then adds it to the first number. When tested with 10 and "5", it returns 15, demonstrating the addition of the converted number string to 10.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -118,10 +119,9 @@ console.log(addNumberAndString(10, "5")); // Shows 15
                     <strong>➡️ Explanation of Question 68</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The multiplyDecimals function multiplies two decimal numbers and rounds the result to two decimal places for clarity. When tested with 0.1 and 0.2, it returns 0.02, demonstrating the rounded product of the two decimal numbers.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -178,9 +178,7 @@ console.log(multiplyDecimals(0.1, 0.2)); // Shows 0.02
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                 The divideAndRemainder function calculates both the quotient and remainder when dividing two numbers. When tested with 10 divided by 3, it returns an object containing the quotient (3) and remainder (1), showing how many times 3 goes into 10 and what remains.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

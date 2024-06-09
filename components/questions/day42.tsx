@@ -57,9 +57,10 @@ const Day42 = () => {
                     <strong> ➡️ Explanation of Question 124 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The code defines an object person with a name property set to "Alice" and a method getName. Inside getName, this refers to the person object, so this.name accesses the object's own name property. When getName is called via person.getName(), it returns the value of name, which is "Alice". This illustrates how this within a method allows it to directly access and return properties of its containing object.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -119,10 +120,9 @@ console.log(person.getName()); // Outputs: Alice
                     <strong>➡️ Explanation of Question 125</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code defines an object rectangle with properties length and width, and a method calculateArea. Inside calculateArea, this refers to the rectangle object, allowing the method to access its own properties length and width. When calculateArea is called via rectangle.calculateArea(), it multiplies these properties to compute and return the area, which is 20 (4 * 5). This demonstrates how this in a method allows it to interact with and use the object's own properties.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -184,9 +184,9 @@ console.log(rectangle.calculateArea()); // Outputs: 20
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   The code defines an object myObject with a property property and a method outerMethod. Inside outerMethod, this refers to myObject, so this.property logs "Value". outerMethod also defines an arrow function innerMethod. Unlike regular functions, arrow functions don't have their own this; instead, they capture this from the enclosing scope. So, when innerMethod is called, this still refers to myObject, and this.property again logs "Value". This demonstrates how arrow functions can be useful for preserving this context in nested functions.
+
+
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

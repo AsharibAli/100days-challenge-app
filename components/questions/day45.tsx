@@ -54,9 +54,10 @@ const Day45 = () => {
                     <strong> ➡️ Explanation of Question 133 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The code uses JSON.stringify() to convert a JavaScript object person (with properties name, age, and city) into a JSON string jsonString. When logged, jsonString is a compact, unformatted JSON representation of the original object, useful for data storage or transmission in formats like HTTP requests or local storage.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -114,10 +115,9 @@ console.log(jsonString);
                     <strong>➡️ Explanation of Question 134</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code demonstrates JSON.parse(), which converts a JSON string jsonString (representing a person with name, age, and city) back into a JavaScript object person. When person is logged, it outputs the original object structure, showing how JSON.parse() is used to deserialize JSON data into JavaScript objects, essential for handling data from APIs or stored in JSON format.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -174,9 +174,7 @@ console.log(person); // Outputs the original object
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                 The code uses JSON.stringify() to convert a person object with properties name, age, and city into a formatted JSON string. By passing 2 as the third argument, it indents the JSON output with two spaces per level, making it more readable, which is especially useful for debugging or when data needs to be in a human-friendly format.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

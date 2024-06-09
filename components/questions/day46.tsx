@@ -57,9 +57,12 @@ const Day46 = () => {
                     <strong> ➡️ Explanation of Question 136 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
+                    {`
+Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    apps, command line tools and scripts.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -116,10 +119,7 @@ for (let i = 1; i <= 5; i++) {
                     <strong>➡️ Explanation of Question 137</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`The code demonstrates error handling using a try-catch block. Inside the try block, it intentionally throws a new Error with the message "Something went wrong". The catch block catches this thrown error, assigns it to the variable error, and then logs error.message, which outputs "Something went wrong". This pattern allows graceful handling of errors, preventing them from crashing the application and providing an opportunity to log, report, or handle the error appropriately.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -177,9 +177,7 @@ try {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   The code demonstrates setting a breakpoint for debugging in browser developer tools. It logs a message, then has a commented instruction to set a breakpoint on the following line, which also logs a message. Another log follows. To use this, open the code in a browser, access developer tools (usually F12 or right-click > Inspect), go to the Sources tab, find this script, and click the line number of the desired breakpoint. Reloading or running the page will pause execution at the breakpoint, allowing inspection of variables and step-by-step debugging.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

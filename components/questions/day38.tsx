@@ -57,9 +57,11 @@ const Day38 = () => {
                     <strong> ➡️ Explanation of Question 112 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The code creates a Map named countries to store country-capital pairs. Three key-value pairs are added to the map using the set method: "USA" with capital "Washington, D.C.", "France" with capital "Paris", and "Japan" with capital "Tokyo". Finally, the code logs the entire map using console.log(). This approach is useful for organizing and accessing data in pairs, such as countries and their capitals.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -113,15 +115,19 @@ console.log(countries);
                     <strong>➡️ Explanation of Question 113</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The code snippet provided for question 112 creates a Map named countries to store countries as keys and their capitals as values. Three entries are added to the map using the set method. Afterward, the code logs the entire map using console.log().
+
+For question 113, a function named logCapitalOfCanada is defined, which takes a Map object named countries as input. Inside the function, it checks if the map contains the key "Canada" using the has method. If "Canada" exists in the map, it logs the capital of Canada using the get method. Otherwise, it logs a message indicating that Canada is not in the map.
+
+This setup allows for easy retrieval and logging of the capital of Canada from the provided Map.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-// Answer of Q12:
+// Answer of Q112:
 // Creates a new Map to store countries and their capitals
 const countries = new Map<string, string>();
 countries.set("USA", "Washington, D.C."); // Adds USA to the Map
@@ -131,7 +137,7 @@ countries.set("Japan", "Tokyo"); // Adds Japan to the Map
 console.log(countries);
 // Logs the Map with the countries and their capitals.
 
-// Answer of Q13:
+// Answer of Q113:
 // This function checks for "Canada" in the Map and logs its capital
 function logCapitalOfCanada(countries: Map<string, string>): void {
   if (countries.has("Canada")) {
@@ -187,9 +193,9 @@ logCapitalOfCanada(countries);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The code creates a Map named students to store student IDs as keys and names as values. It then adds three entries to the map using the set method. Afterward, it iterates over the map using the forEach method, logging each student's ID and name. This loop allows for easy retrieval and display of student information stored in the map.
+
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

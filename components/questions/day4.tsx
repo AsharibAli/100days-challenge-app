@@ -60,20 +60,17 @@ const Day4 = () => {
                     <strong> ➡️ Explanation of Question 10 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
+                    {`
+Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    apps, command line tools and scripts.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-// Asharib, 2024-03-05
-// This program prints a personal message.
-
-let myName: string = "Asharib";
-
-console.log(\`Hello \${myName}, would you like to learn 
-some TypeScript today?\`\);
+This code defines a variable myName with the value "Asharib" and prints a personalized message to the console: "Hello Asharib, would you like to learn some TypeScript today?" using template literals for string interpolation.
               `}
                         </pre>
                       </code>
@@ -116,10 +113,7 @@ some TypeScript today?\`\);
                     <strong>➡️ Explanation of Question 11</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code defines an array names containing the strings "Alice", "Bob", and "Charlie". It then uses a for loop to iterate over the array, printing each name to the console.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -173,9 +167,7 @@ for (let i = 0; i < names.length; i++) {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  This code defines an array "names" containing the strings "Alice", "Bob", and "Charlie". It then uses a "for...of" loop to iterate over the array, printing a personalized message for each name to the console: "Hello [name], would you like to learn some TypeScript today?" using template literals for string interpolation.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

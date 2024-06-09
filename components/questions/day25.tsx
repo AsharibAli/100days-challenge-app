@@ -59,9 +59,11 @@ const Day25 = () => {
                     <strong> ➡️ Explanation of Question 73 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The updateVariable() function demonstrates variable assignment and updating. Initially, it assigns the value 10 to the variable number, then logs this initial value. Subsequently, it updates the value to 20 and logs the updated value. This illustrates the process of assigning and updating variable values.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -120,10 +122,10 @@ updateVariable();
                     <strong>➡️ Explanation of Question 74</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The swapValues() function swaps the values of two variables a and b. Initially, a is 5 and b is 10. Using a temporary variable temp, it temporarily stores the value of a, then sets a to the value of b, and finally assigns b the original value of a stored in temp. This technique effectively exchanges the values of the variables.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -187,9 +189,8 @@ swapValues();
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   
+The function useCompoundOperators() demonstrates the application of compound assignment operators for various operations. Beginning with x equal to 4, it sequentially adds, subtracts, multiplies, and divides x by 2, displaying the result after each operation. This approach simplifies arithmetic operations on x by combining them with assignment in a concise manner.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

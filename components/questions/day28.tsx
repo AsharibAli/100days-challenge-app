@@ -57,9 +57,11 @@ const Day28 = () => {
                     <strong> ➡️ Explanation of Question 82 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The stringLength function calculates the number of characters in a given string using the length property of the string. For instance, when provided with the string "Alice", it returns the value 5, indicating that there are 5 characters in the string.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -114,10 +116,10 @@ console.log(stringLength("Alice")); // Outputs: 5
                     <strong>➡️ Explanation of Question 83</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The convertCase function takes a string as input, converts it to uppercase using toUpperCase(), and then converts it to lowercase using toLowerCase(). For instance, when given the string "Hello World", it outputs "Uppercase: HELLO WORLD Lowercase: hello world", demonstrating the text in both uppercase and lowercase formats.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -177,9 +179,8 @@ convertCase("Hello World");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  
+The replaceJavaScriptWithTypeScript function takes a sentence as input and replaces all occurrences of "JavaScript" with "TypeScript" using a regular expression with the 'g' flag for global replacement. For example, when given the sentence "I love JavaScript and JavaScript is awesome!", it outputs "I love TypeScript and TypeScript is awesome!", where every occurrence of "JavaScript" is replaced with "TypeScript".
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

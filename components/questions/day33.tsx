@@ -57,9 +57,11 @@ const Day33 = () => {
                     <strong> ➡️ Explanation of Question 97 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The getCurrentDateFormatted function retrieves the current date and formats it as "DD-MM-YYYY". It creates a Date object for the current date, then extracts the day, month, and year components. The day and month are converted to strings and padded with leading zeros if necessary to ensure they are two digits long. Finally, it returns the formatted date string, which is then logged to the console.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -119,10 +121,10 @@ console.log(getCurrentDateFormatted());
                     <strong>➡️ Explanation of Question 98</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The daysUntilNewYear function calculates the number of days left until New Year's Day. It starts by getting the current date, then creates a Date object for January 1st of the next year. It finds the difference between the two dates in milliseconds, converts it to days, and returns the result. When called, it outputs the number of days until the next New Year's Day.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -186,9 +188,8 @@ console.log(daysUntilNewYear() + " days until New Year.");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  
+The getNextBirthday function takes the birth month and day as parameters and returns a Date object for the next occurrence of that birthday. It calculates the next birthday based on the current year and checks if it has already passed this year. If it has, it sets the year to the next one. Finally, it returns the Date object for the next birthday. When called with December 25th as parameters, it outputs "Next birthday on: [date]", indicating the date of the next birthday.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

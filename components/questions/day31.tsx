@@ -57,9 +57,11 @@ const Day31 = () => {
                     <strong> ➡️ Explanation of Question 91 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The push method adds "Mango" to the end of the favoriteFruits array, extending it to ['Apple', 'Banana', 'Cherry', 'Mango'].
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -113,10 +115,10 @@ console.log(favoriteFruits);
                     <strong>➡️ Explanation of Question 92</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The removeLastElement function removes and returns the last element of the array using the pop method. In the example, "Cherry" is removed from the fruits array, and it returns 'Cherry'. Afterward, the array contains ['Apple', 'Banana'].
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -175,9 +177,8 @@ console.log(fruits); // Outputs: ['Apple', 'Banana']
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  
+The replaceBananaWithMango function finds the index of "Banana" in the fruits array using the indexOf method. If "Banana" is found (index is not -1), it replaces it with "Mango". In the example, "Banana" is replaced with "Mango" in the fruits array, resulting in ['Apple', 'Mango', 'Cherry'].
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

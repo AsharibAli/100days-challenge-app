@@ -57,9 +57,11 @@ const Day21 = () => {
                     <strong> ➡️ Explanation of Question 61 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+This program defines an enum VehicleType representing different types of vehicles such as Car, Truck, and Motorcycle. When logged to the console, VehicleType.Car displays 0 because enums start counting from 0 by default. This line simply checks the assigned number for the Car category in our enum list.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -118,10 +120,10 @@ console.log(VehicleType.Car);
                     <strong>➡️ Explanation of Question 62</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+This program defines an interface Student as a blueprint for student information, ensuring each student object includes properties for name, age, and an array of courses. It then fills in this blueprint with an example student Alice, specifying her name, age, and list of courses. Finally, it logs the student's information to the console, demonstrating the use of the blueprint to ensure the required properties are present for each student.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -188,9 +190,7 @@ console.log(student);
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+This program creates a custom type Shape that can describe shapes as either circles or rectangles, with specific properties for each shape. It then defines instances of circle and rectangle using this type, showcasing their respective details such as radius or width and height. Finally, it logs these shape descriptions to the console, demonstrating the flexibility of the program in describing different shapes in detail.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

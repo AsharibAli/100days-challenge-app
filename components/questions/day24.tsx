@@ -58,9 +58,10 @@ const Day24 = () => {
                     <strong> ➡️ Explanation of Question 70 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The function printNumbersWithLet() prints numbers from 1 to 5 using a loop. It employs let for the loop variable i, ensuring its scope is limited to the loop block. Consequently, i is inaccessible outside the loop, preventing unintended usage and potential errors.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -120,10 +121,9 @@ printNumbersWithLet();
                     <strong>➡️ Explanation of Question 71</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code demonstrates the use of let for a variable age, allowing reassignment, as shown by changing its value from 25 to 26. However, attempting to reassign a const-declared variable name generates an error, highlighting that const prevents variable reassignment after initialization.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -187,9 +187,7 @@ try {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                The code demonstrates block scope by defining variables blockLet and blockConst within a block using let and const. These variables are accessible within the block but inaccessible outside it, as demonstrated by the subsequent try blocks where attempting to log them outside the block results in failure. This showcases how let and const limit variable visibility to their respective blocks, ensuring safer variable usage.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

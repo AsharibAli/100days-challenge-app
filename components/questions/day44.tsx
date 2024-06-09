@@ -57,9 +57,16 @@ const Day44 = () => {
                     <strong> ➡️ Explanation of Question 130 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The code demonstrates the export and import of a simple function in TypeScript:
+
+In mathFunctions.ts, an arrow function add is defined. It takes two parameters a and b, both of type number, and returns their sum, also of type number. The : number after the parameter list is TypeScript's way of specifying the return type. The export keyword makes this function available for import in other files.
+In another file, the add function is imported using the named import syntax import { add } from "./mathFunctions". This allows the file to use the add function as if it were defined locally.
+The imported add function is then used by calling add(2, 3), which returns 5 and logs it to the console.
+
+This pattern of exporting and importing individual functions is common in TypeScript/JavaScript for building modular, reusable code. It allows you to organize your code into logical units (like math functions) and use them across different parts of your application.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -118,10 +125,15 @@ export const add = (a: number, b: number): number => a + b;
                     <strong>➡️ Explanation of Question 131</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code demonstrates the export and import of a TypeScript class:
+
+In Person.ts, the Person class is defined with a name property, a constructor that takes a name parameter to initialize this.name, and a greet method that logs a greeting with the person's name. The export keyword before class makes this class available for import in other files.
+In another file, the Person class is imported using the named import syntax import { Person } from "./Person". This allows the file to use the Person class as if it were defined locally.
+An instance of Person named alice is created with the argument "Alice", which gets passed to the constructor. Calling alice.greet() invokes the greet method, outputting "Hello, my name is Alice".
+
+This pattern of exporting and importing classes is fundamental in TypeScript/JavaScript for code organization, reusability, and maintaining separation of concerns across files.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -189,9 +201,12 @@ export class Person {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   The code demonstrates two types of module exports and imports in JavaScript/TypeScript:
+
+Named exports: In utils.ts, utilOne and utilTwo are exported individually using the export keyword. These are imported in the first code block using the destructuring syntax { utilOne, utilTwo }, allowing selective import of specific functions or variables from a module.
+Default export: In the second code block, a Calculator class is exported as the default using export default. There can be only one default export per module. It's imported in the first code block without curly braces, and the imported name (Calculator) can be different from the exported name if desired.
+
+This distinction allows for flexibility in structuring and importing modules, with default exports typically used for a module's primary export and named exports for multiple, specific exports.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

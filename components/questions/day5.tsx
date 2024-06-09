@@ -59,9 +59,10 @@ const Day5 = () => {
                     <strong> ➡️ Explanation of Question 13 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code defines an array "transports" containing transportation options: "Honda motorcycle", "Tesla car", and "bicycle". It then utilizes the "forEach" method to iterate over each element in the array, printing a message for each transport: "I would like to own a [transport]." using template literals for string interpolation.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -114,10 +115,7 @@ transports.forEach(transport => {
                     <strong>➡️ Explanation of Question 14</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code defines an array "guests" containing the names of guests: "Albert Einstein", "Marie Curie", and "Nikola Tesla". It then uses the "forEach" method to iterate over each element in the array, printing a personalized invitation message for each guest to the console: "Dear [guest], would you like to join me for dinner?" using template literals for string interpolation.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -176,9 +174,9 @@ guests.forEach(guest => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   In the first part, the code prints personalized dinner invitations to each guest stored in the "guests" array using a "forEach" loop. Each invitation includes the guest's name interpolated into the message.
+
+In the second part, it logs a message stating that "Nikola Tesla" can't attend dinner. Then, it replaces "Nikola Tesla" with "Leonardo da Vinci" in the "guests" array using "indexOf" to find the index of "Nikola Tesla" and replacing it with "Leonardo da Vinci". Finally, it prints new dinner invitations to each guest, now including "Leonardo da Vinci" instead of "Nikola Tesla".
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

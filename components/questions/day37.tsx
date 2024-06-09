@@ -57,9 +57,11 @@ const Day37 = () => {
                     <strong> ➡️ Explanation of Question 109 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The code checks the current hour using currentTime.getHours(). If the current hour is before 12 PM, it logs "Good Morning". This simple conditional statement allows for appropriate greetings based on the time of day.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -112,10 +114,10 @@ if (currentTime.getHours() < 12) {
                     <strong>➡️ Explanation of Question 110</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The assignGrade function efficiently assigns a grade based on a numeric score. If the score is 90 or above, it returns "A". If it's between 80 and 89 (inclusive), it returns "B". Similarly, for scores between 70 and 79, it returns "C", for scores between 60 and 69, it returns "D", and for scores below 60, it returns "F". Hence, assignGrade(85) correctly outputs "B", and assignGrade(55) outputs "F".
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -179,9 +181,8 @@ console.log(assignGrade(55)); // Outputs: F
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  
+The categorizeAge function effectively categorizes a person's age into three groups: "child" for ages below 13, "teenager" for ages between 13 and 19 (inclusive), and "adult" for ages 20 and above. For instance, categorizeAge(12) correctly returns "child", categorizeAge(18) returns "teenager", and categorizeAge(25) returns "adult".
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

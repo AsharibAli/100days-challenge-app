@@ -64,9 +64,14 @@ const Day12 = () => {
                     <strong> ➡️ Explanation of Question 34 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+This code initializes an array "pizzas" containing strings representing different types of pizzas such as "pepperoni", "margherita", and "hawaiian". It then iterates over each element in the array using the "forEach" method.
+
+For each pizza type, it logs a message using template literals to indicate that it likes the particular pizza type: "I like [pizza] pizza.".
+
+After iterating through all pizzas, it logs "I really love pizza!" to emphasize its love for pizza in general.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -126,10 +131,11 @@ console.log("I really love pizza!");
                     <strong>➡️ Explanation of Question 35</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`This code initializes an array "animals" containing strings representing different types of animals such as "dog", "cat", and "rabbit". It then iterates over each element in the array using the "forEach" method.
+
+For each animal type, it logs a message using template literals to indicate that the particular animal would make a great pet: "A [animal] would make a great pet.".
+
+After iterating through all animals, it logs "Any of these animals would make a great pet!" to express the general idea that all animals in the list would be suitable as pets.`}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -186,9 +192,11 @@ console.log("Any of these animals would make a great pet!");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+This code defines a function "make_shirt" that takes two parameters: "size", indicating the size of the shirt (as a string), and "message", indicating the message to be printed on the shirt (as a string). 
+
+Within the function, it logs a message using template literals to indicate the process of making a t-shirt with the provided size and message printed on it: "Making a [size] t-shirt with the message "[message]" printed on it".
+
+Finally, it calls the "make_shirt" function with arguments "medium" for the size and "Code is Life" for the message.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

@@ -58,9 +58,11 @@ const Day26 = () => {
                     <strong> ➡️ Explanation of Question 76 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+
+The addNumbers function takes two parameters, num1 and num2, both of type number, and returns their sum. When called with the arguments 5 and 7, it returns 12, which is then logged to the console.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -115,10 +117,10 @@ console.log(addNumbers(5, 7)); // Outputs 12
                     <strong>➡️ Explanation of Question 77</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    
+The greetUser function takes an optional name parameter, defaulting to "anonymous" if no name is provided. It then logs a greeting message to the console, addressing the given name or using "anonymous" if none is given. Invoking the function with "Alice" results in "Hello, Alice!" being printed, while calling it without arguments outputs "Hello, anonymous!", showcasing its flexibility in greeting users by name or as an anonymous user.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -180,9 +182,7 @@ greetUser(); // Outputs: Hello, anonymous!
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  The code demonstrates two methods for squaring a number. First, there's a function declaration named squareDeclaration, which takes a number as input and returns its square. Second, there's a function expression assigned to the variable squareExpression, achieving the same purpose. Both functions are then invoked with the number 4, resulting in the output 16. This showcases two distinct approaches to defining functions that accomplish the same task.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

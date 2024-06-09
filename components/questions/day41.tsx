@@ -57,9 +57,10 @@ const Day41 = () => {
                     <strong> ➡️ Explanation of Question 121 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts. <br /> <br />
+                    {`
+The code uses a for loop to count from 1 to 10. Within the loop, an if statement checks if the current value of i is 5. If it is, the continue statement is used to skip the rest of the loop's code for that iteration, effectively skipping the logging of 5. As a result, it logs all numbers from 1 to 10, except for 5.
+`}{" "}
+                    <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -114,10 +115,9 @@ for (let i = 1; i <= 10; i++) {
                     <strong>➡️ Explanation of Question 122</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    The code initializes a counter variable to 10 and uses a while loop to count down. In each iteration, it checks if counter is equal to 5; if true, it uses the break statement to immediately exit the loop. Otherwise, it logs the current value of counter and decrements it by 1. This results in logging the countdown from 10 to 6, but stops before logging 5.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -176,9 +176,7 @@ while (counter > 0) {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   The logUntilVowel function takes a string str as input and uses a for...of loop to iterate through each character. It checks if the current character is a vowel by using the includes method on a string of vowels. If a vowel is found, it logs a message with the vowel and then breaks the loop. Otherwise, it logs each non-vowel character. When called with "syzygy", it logs 's', 'y', 'z', 'y', and then 'First vowel found: y', stopping at the first vowel.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
