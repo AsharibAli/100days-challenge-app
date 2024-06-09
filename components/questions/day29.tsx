@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day29 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,23 @@ const Day29 = () => {
                     <strong> ➡️ Explanation of Question 85 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 29)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function finds where "code" first shows up in a text
+function findCodePosition(str: string): number {
+  return str.indexOf("code");
+  // Looks for "code" and tells where it found it
+}
+
+// Example: Searching within a sentence
+console.log(findCodePosition("Learn to code with JavaScript"));
+// Outputs the start position of "code"
+// It tells us the position number where "code" starts.
               `}
                         </pre>
                       </code>
@@ -133,9 +125,16 @@ const Day29 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function checks if a sentence has "JavaScript" in it
+function hasJavaScript(str: string): boolean {
+  return str.includes("JavaScript"); 
+  // Checks for "JavaScript" and returns true or false
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Example: Seeing if a text mentions JavaScript
+console.log(hasJavaScript("I love coding in JavaScript!"));
+// Outputs true or false based on the check
+// It simply says true if "JavaScript" is there, or false if it's not.
 `}
                         </pre>
                       </code>
@@ -186,12 +185,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function takes out the first 10 characters from any text
+function extractFirstTenChars(str: string): string {
+  return str.substring(0, 10); 
+  // Gets characters from start to position 10
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Example: Taking the first 10 characters of a sentence
+console.log(extractFirstTenChars("Hello, JavaScript world!")); 
+
+// Shows the first 10 characters
+// It gives us a smaller piece of the original text,
+// just the beginning part.
               `}
                         </pre>
                       </code>

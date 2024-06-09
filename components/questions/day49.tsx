@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day49 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,33 @@ const Day49 = () => {
                     <strong> ➡️ Explanation of Question 145 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-49">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 49)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function accepts a callback function and 
+// invokes it with given arguments
+function executeCallback(
+  callback: (arg1: number, arg2: number) => void,
+  arg1: number,
+  arg2: number
+): void {
+  callback(arg1, arg2); 
+  // Invokes the callback with the specified arguments
+}
+
+// Example callback function that adds two numbers
+const add = (a: number, b: number) => {
+  console.log(a + b); // Outputs the sum of a and b
+};
+
+executeCallback(add, 5, 3); // Outputs: 8
+// Demonstrates invoking a callback function with
+// arguments to perform an addition.
+
               `}
                         </pre>
                       </code>
@@ -131,9 +133,17 @@ const Day49 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-49">
                           {`
-let myName: string = "Asharib";
+// This array of numbers will be filtered
+const numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Uses .filter() with a callback function to filter
+// out numbers greater than 5
+const filteredNumbers: number[] = numbers.filter
+((number) => number > 5);
+
+console.log(filteredNumbers); // Outputs: [6, 7, 8, 9, 10]
+// The callback function here checks each number, and .filter()
+// creates a new array with numbers that meet the criteria.
 `}
                         </pre>
                       </code>
@@ -181,12 +191,31 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-49">
                           {`
-let myName: string = "Asharib";
+// Function that uses a callback pattern, including error handling
+function fetchData(
+  callback: (error: Error | null, data?: string) => void
+): void {
+  // Simulating an error condition
+  const error = new Error("Failed to fetch data");
+  const data = "Some data";
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+  // Simulate fetching data with a chance of error
+  if (Math.random() > 0.5) {
+    callback(null, data); // No error, data is fetched successfully
+  } else {
+    callback(error); // Passes error to the callback
+  }
+}
+
+// Using the fetchData function with error handling in the callback
+fetchData((error, data) => {
+  if (error) {
+    console.error(error.message); // Handles the error
+  } else {
+    console.log(data); // Processes the data
+  }
+});
+// Demonstrates a callback pattern where errors are handled gracefully.
               `}
                         </pre>
                       </code>

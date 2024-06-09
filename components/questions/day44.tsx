@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day44 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,26 @@ const Day44 = () => {
                     <strong> ➡️ Explanation of Question 130 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 44)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// In another file where you want to use the add function:
+import { add } from "./mathFunction";
+
+console.log(add(2, 3)); // Outputs: 5
+// Demonstrates importing the add function
+// from mathFunctions.ts and using it.
+              `}
+                          <br /> <br />
+                          {`
+// In file: mathFunctions.ts
+export const add = (a: number, b: number): number => a + b;
+// This line exports an add function from mathFunctions.ts
+
               `}
                         </pre>
                       </code>
@@ -131,9 +126,27 @@ const Day44 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// In another file:
+import { Person } from "./Person";
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+const alice = new Person("Alice");
+alice.greet(); // Outputs: Hello, my name is Alice
+// This snippet imports the Person class and uses it to create an instance.
+`}
+                          <br /> <br />
+                          {`
+// In file: Person.ts
+export class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  greet() {
+    console.log(\`Hello, my name is \${this.name}\`);
+  }
+}
+// Exports the Person class
+
 `}
                         </pre>
                       </code>
@@ -184,13 +197,31 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Importing named exports:
+import { utilOne, utilTwo } from "./utils";
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Importing a default export:
+import Calculator from "./Calculator";
+
+// This code illustrates the syntax and usage differences 
+// between default and named exports.
               `}
+                          <br /> <br />
+                          {`
+export default class Calculator {
+  // Class definition
+}
+`}
+                          <br /> <br />
+                          {`
+// Named export example in file: utils.ts
+export const utilOne = () => {
+  /*...*/
+};
+export const utilTwo = () => {
+  /*...*/
+};
+`}
                         </pre>
                       </code>
                     </div>

@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day25 = () => {
   const handleCopyCode = () => {
@@ -60,30 +59,25 @@ const Day25 = () => {
                     <strong> ➡️ Explanation of Question 73 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 25)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function shows how to assign and update variable values
+function updateVariable() {
+  let number = 10; // Initially assigns the value 10
+  console.log("Initial value:", number); // Logs the initial value
+  number = 20; // Updates the value to 20
+  console.log("Updated value:", number); // Logs the updated value
+}
+
+updateVariable();
+// We assign a value to a variable and then update it,
+// showing how values can change.
+
               `}
                         </pre>
                       </code>
@@ -134,9 +128,21 @@ const Day25 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function swaps the values of two variables
+function swapValues() {
+  let a = 5,
+    b = 10; // Initially, a is 5 and b is 10
+  console.log("Before swap: a =", a, "b =", b);
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+  let temp = a; // Temporarily stores the value of a
+  a = b; // Sets a to b's value
+  b = temp; // Sets b to a's original value stored in temp
+
+  console.log("After swap: a =", a, "b =", b); // Logs the swapped values
+}
+
+swapValues();
+// We use a temporary variable to hold one value while we swap them!
 `}
                         </pre>
                       </code>
@@ -189,12 +195,27 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function uses compound assignment operators for operations
+function useCompoundOperators() {
+  let x = 4; // Starts with x equal to 4
+  console.log("Initial x:", x);
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+  x += 2; // Adds 2 to x
+  console.log("After addition:", x); // Shows x after addition
+
+  x -= 1; // Subtracts 1 from x
+  console.log("After subtraction:", x); // Shows x after subtraction
+
+  x *= 3; // Multiplies x by 3
+  console.log("After multiplication:", x); // Shows x after multiplication
+
+  x /= 2; // Divides x by 2
+  console.log("After division:", x); // Shows x after division
+}
+
+useCompoundOperators();
+// We simplify arithmetic operations on x using 
+// compound assignment operators.
               `}
                         </pre>
                       </code>

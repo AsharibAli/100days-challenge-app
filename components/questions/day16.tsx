@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day16 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,24 @@ const Day16 = () => {
                     <strong> ➡️ Explanation of Question 46 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let laptop = {
+  make: "Dell",
+  model: "New Elite Series",
+  year: 2024,
+  describe: function () {
+console.log(\`This laptop is a \${this.year} \${this.make} \${this.model}.\`);
+  },
+};
+
+laptop.describe();
+
               `}
                         </pre>
                       </code>
@@ -134,9 +127,17 @@ const Day16 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let laptops = [
+  { make: "Dell", model: "XPS 15", year: 2021 },
+  { make: "Apple", model: "MacBook Pro", year: 2020 },
+  { make: "HP", model: "Spectre x360", year: 2021 },
+];
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+let [laptop1, laptop2] = laptops;
+
+console.log(laptop1);
+console.log(laptop2);
+
 `}
                         </pre>
                       </code>
@@ -189,12 +190,10 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
-
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+let pricesSet1 = [1200, 1500, 1100];
+let pricesSet2 = [1000, 1300, 1600];
+let combinedPrices = [...pricesSet1, ...pricesSet2].sort((a, b) => a - b);
+console.log(combinedPrices);
               `}
                         </pre>
                       </code>

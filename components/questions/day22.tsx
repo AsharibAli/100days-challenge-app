@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day22 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,23 @@ const Day22 = () => {
                     <strong> ➡️ Explanation of Question 64 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function mixes a text and a number into one text
+function combineStringAndNumber(text: string, number: number): string {
+  // Joins the text and number into a single text
+  return text + number;
+}
+
+// Trying it out with "Age: " and 30
+console.log(combineStringAndNumber("Age: ", 30)); // Shows "Age: 30"
+// Here, we put together the text and number.
+
               `}
                         </pre>
                       </code>
@@ -133,9 +125,15 @@ const Day22 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function finds the leftover of dividing two numbers
+function remainder(num1: number, num2: number): number {
+  // Gives back the leftover of num1 divided by num2
+  return num1 % num2;
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Trying it with 5 divided by 2
+console.log(remainder(5, 2)); // Shows 1
+// This tells us the leftover, which is 1 here.
 `}
                         </pre>
                       </code>
@@ -188,12 +186,15 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function sees if both inputs are true
+function checkBothTrue(val1: boolean, val2: boolean): boolean {
+  // Only says true if both val1 and val2 are true
+  return val1 && val2;
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Trying it with true and false
+console.log(checkBothTrue(true, false)); // Shows false
+// It checks two things, but since one is false, the answer is false.
               `}
                         </pre>
                       </code>

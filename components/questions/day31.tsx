@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day31 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,21 @@ const Day31 = () => {
                     <strong> ➡️ Explanation of Question 91 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 31)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Defines an array with three favorite fruits
+let favoriteFruits: string[] = ["Apple", "Banana", "Cherry"];
+favoriteFruits.push("Mango"); 
+// Adds "Mango" to the end of the array
+
+console.log(favoriteFruits); 
+// Outputs: ['Apple', 'Banana', 'Cherry', 'Mango']
+// This line adds a new fruit to our list of favorites.
               `}
                         </pre>
                       </code>
@@ -131,9 +121,18 @@ const Day31 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function removes the last element from an array and returns it
+function removeLastElement<T>(arr: T[]): T | undefined {
+  return arr.pop(); 
+  // Removes and returns the last element of the array
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Example: Removing the last fruit from the array
+const fruits: string[] = ["Apple", "Banana", "Cherry"];
+console.log(removeLastElement(fruits)); // Outputs: 'Cherry'
+console.log(fruits); // Outputs: ['Apple', 'Banana']
+// Here, we take out the last fruit and show the updated list.
+
 `}
                         </pre>
                       </code>
@@ -184,12 +183,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function finds "Banana" in the fruits 
+// array and replaces it with "Mango"
+function replaceBananaWithMango(fruits: string[]): void {
+  const index = fruits.indexOf("Banana"); 
+  // Finds the index of "Banana"
+  if (index !== -1) fruits[index] = "Mango"; 
+  // Replaces "Banana" with "Mango" if found
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Example: Replacing "Banana" in the array
+const fruits: string[] = ["Apple", "Banana", "Cherry"];
+replaceBananaWithMango(fruits);
+
+console.log(fruits); // Outputs: ['Apple', 'Mango', 'Cherry']
+// We're swapping "Banana" for "Mango" in our fruit list.
+
               `}
                         </pre>
                       </code>

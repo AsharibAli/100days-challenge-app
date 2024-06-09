@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day40 = () => {
   const handleCopyCode = () => {
@@ -55,30 +54,20 @@ const Day40 = () => {
                     <strong> ➡️ Explanation of Question 118 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 40)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This loop logs numbers from 1 to 10
+for (let i = 1; i <= 10; i++) {
+  console.log(i); // Logs the current value of i
+}
+// Each iteration increases the value of i by 1, 
+// logging it until it reaches 10.
+
               `}
                         </pre>
                       </code>
@@ -125,9 +114,15 @@ const Day40 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Initializes a counter
+let count: number = 0;
+// This while loop runs until count is 5
+while (count < 5) {
+  console.log("Hello, World!"); // Logs "Hello, World!"
+  count++; // Increments count by 1
+}
+// Repeats logging "Hello, World!" 5 times, once per loop iteration.
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
 `}
                         </pre>
                       </code>
@@ -178,12 +173,19 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Defines an array of favorite movies
+const favoriteMovies: string[] = [
+  "Inception",
+  "The Matrix",
+  "Interstellar",
+  "The Prestige",
+];
+// Uses a for...of loop to iterate through favoriteMovies
+for (const movie of favoriteMovies) {
+  console.log(movie); // Logs each movie name
+}
+// Each movie in the array is logged to the console, one at a time.
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
               `}
                         </pre>
                       </code>

@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day17 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,26 @@ const Day17 = () => {
                     <strong> ➡️ Explanation of Question 49 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Defines a function that accepts multiple hobbies as arguments
+
+function logHobbies(...hobbies: string[]) {
+  // Loops through each hobby in the array
+  hobbies.forEach((hobby) => {
+    // Logs a statement for each hobby
+    console.log(\`I enjoy \${hobby}.\`);
+  });
+}
+
+// Calls the function with three hobbies
+logHobbies("reading", "coding", "cycling");
+
               `}
                         </pre>
                       </code>
@@ -133,9 +128,16 @@ const Day17 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Using template literals to define a multiline string
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+let myIdealDay = \`My ideal day would involve:
+1. Waking up early and going for a jog.
+2. Spending a few hours coding on a personal project.
+3. Ending the day by reading a good book.\`;
+
+// Logging the multiline string to the console
+console.log(myIdealDay);
+
 `}
                         </pre>
                       </code>
@@ -187,12 +189,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Original function for calculating the area of a rectangle
+function calculateArea(width: number, height: number): number {
+  return width * height;
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Refactored into an arrow function
+let calculateAreaArrow = (width: number, height: number): number =>
+  width * height;
+
+// Example usage of the arrow function
+console.log(calculateAreaArrow(5, 7)); // Logs the area of the rectangle
+
               `}
                         </pre>
                       </code>

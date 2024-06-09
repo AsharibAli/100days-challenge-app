@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day3 = () => {
   const handleCopyCode = () => {
@@ -59,57 +58,20 @@ const Day3 = () => {
                     <strong> ➡️ Explanation of Question 7 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br />
-                    <br />
-                    <strong>What is TypeScript? </strong>
-                    TypeScript is a programming language that builds on
-                    JavaScript by adding static types, which can help catch
-                    errors early in the development process.{" "}
-                    <strong>
-                      <a
-                        href="https://www.javatpoint.com/typescript-installation"
-                        target="_blank"
-                      >
-                        Installation
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
-                    <strong>What is VS Code? </strong>
-                    Visual Studio Code (VS Code) is a free, powerful code editor
-                    made by Microsoft that supports many programming languages
-                    and has a vast array of extensions.{" "}
-                    <strong>
-                      <a
-                        href="https://code.visualstudio.com/Download"
-                        target="_blank"
-                      >
-                        Download
-                      </a>{" "}
-                    </strong>
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+console.log(5 + 3); // Addition
+
+console.log(10 - 2); // Subtraction
+
+console.log(4 * 2); // Multiplication
+
+console.log(16 / 2); // Division
               `}
                         </pre>
                       </code>
@@ -160,9 +122,8 @@ const Day3 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
-
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// (Refer to the answer for Question 7, because it roughly
+serves the same purpose.)
 `}
                         </pre>
                       </code>
@@ -214,12 +175,10 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let favoriteNumber: number = 8; 
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+console.log(\`My favorite number is \${favoriteNumber}.\`\);
+
               `}
                         </pre>
                       </code>
@@ -228,9 +187,7 @@ console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel>Cancel</AlertDialogCancel>
-                  <AlertDialogAction onClick={handleCopyCode}>
-                    Copy the Code
-                  </AlertDialogAction>
+                  <AlertDialogAction>Continue</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>

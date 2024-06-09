@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day35 = () => {
   const handleCopyCode = () => {
@@ -57,30 +56,24 @@ const Day35 = () => {
                     <strong> ➡️ Explanation of Question 103 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 35)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function returns a random boolean value
+function getRandomBoolean(): boolean {
+  return Math.random() > 0.5; 
+  // Returns true if the random number is greater than 0.5
+}
+
+console.log(getRandomBoolean()); 
+// Outputs either true or false randomly
+// By comparing a random number to 0.5, 
+// we effectively get a true or false value randomly.
+
               `}
                         </pre>
                       </code>
@@ -129,9 +122,22 @@ const Day35 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function generates a random hexadecimal color code
+function getRandomHexColor(): string {
+  const color =
+    "#" +
+    Math.floor(Math.random() * 0xffffff)
+      .toString(16)
+      .padStart(6, "0");
+  return color; // Returns the random color code
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(getRandomHexColor()); 
+// Outputs a random hex color code like #ff3e12
+
+// We generate a random number, convert it to hexadecimal,
+// and ensure it's 6 characters long.
+
 `}
                         </pre>
                       </code>
@@ -182,12 +188,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function simulates rolling a dice and returns
+// a number between 1 and 6
+function rollDice(): number {
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Calculates a random integer from 1 to 6
+  return Math.floor(Math.random() * 6) + 1; 
+}
+
+console.log(rollDice()); 
+// Outputs a random number between 1 and 6
+// Here, we mimic the action of rolling a dice and getting a result.
+
               `}
                         </pre>
                       </code>

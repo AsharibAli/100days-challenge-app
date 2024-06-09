@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day24 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,26 @@ const Day24 = () => {
                     <strong> ➡️ Explanation of Question 70 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function prints numbers from 1 to 5 using a loop
+function printNumbersWithLet() {
+  for (let i = 1; i <= 5; i++) {
+    // Uses let for loop variable i
+    console.log(i); // Logs numbers 1 through 5
+  }
+  // i is not accessible here, outside the loop,
+  // because it's defined with let
+}
+
+printNumbersWithLet();
+// This shows that let limits i to the loop, preventing errors from 
+// using i where it's not intended.
               `}
                         </pre>
                       </code>
@@ -133,9 +128,21 @@ const Day24 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Using \`let\` for a variable that can be reassigned
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+let age = 25;
+age = 26; // Works fine because \`let\` allows reassignment
+console.log(age); // Shows 26
+
+// Trying to reassign a \`const\`-declared variable
+const name = "Alice";
+try {
+  name = "Bob"; // This line will cause an error
+} catch (error) {
+  console.log("Error: Can't reassign a \`const\`-declared variable.");
+}
+// This example illustrates that \`const\` prevents changing the 
+// variable once it's set.
 `}
                         </pre>
                       </code>
@@ -188,12 +195,27 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Demonstrating block scope
+{
+  let blockLet = "visible inside the block";
+  const blockConst = "also only inside the block";
+  console.log(blockLet); // Works fine here
+  console.log(blockConst); // Also works fine here
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+try {
+  console.log(blockLet); // This will fail
+} catch (error) {
+  console.log("\`blockLet\` is not accessible outside the block.");
+}
+
+try {
+  console.log(blockConst); // This will also fail
+} catch (error) {
+  console.log("\`blockConst\` is not accessible outside the block.");
+}
+// This shows that \`let\` and \`const\` keep variables safe
+// inside the block where they're defined.
               `}
                         </pre>
                       </code>

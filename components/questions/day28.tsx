@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day28 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,22 @@ const Day28 = () => {
                     <strong> ➡️ Explanation of Question 82 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 28)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function counts how many characters are in a string
+function stringLength(str: string): number {
+  return str.length; // Returns the number of characters in the string
+}
+
+// Example: Measuring the length of a name
+console.log(stringLength("Alice")); // Outputs: 5
+// We're simply asking how long the string "Alice" is,
+//  and it tells us there are 5 characters.
               `}
                         </pre>
                       </code>
@@ -131,9 +122,18 @@ const Day28 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function changes a string to uppercase and then to lowercase
+function convertCase(str: string) {
+  let upperStr = str.toUpperCase(); // Converts to uppercase
+  let lowerStr = str.toLowerCase(); // Converts to lowercase
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+  console.log("Uppercase:", upperStr, "Lowercase:", lowerStr);
+}
+
+// Example: Changing the case of "Hello World"
+convertCase("Hello World"); 
+// Outputs: "Uppercase: HELLO WORLD Lowercase: hello world"
+// We're showing the same text in all uppercase and then all lowercase.
 `}
                         </pre>
                       </code>
@@ -185,12 +185,20 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function swaps "JavaScript" with "TypeScript" in a sentence
+function replaceJavaScriptWithTypeScript(sentence: string): string {
+  return sentence.replace(/JavaScript/g, "TypeScript");
+  // Uses a regular expression with the 'g' flag for a global replacement
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Example: Changing a programming language name in a sentence
+console.log(
+  replaceJavaScriptWithTypeScript(
+    "I love JavaScript and JavaScript is awesome!"
+  )
+);
+// Outputs: "I love TypeScript and TypeScript is awesome!"
+// Every "JavaScript" in the sentence is changed to "TypeScript".
               `}
                         </pre>
                       </code>

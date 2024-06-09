@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day47 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,31 @@ const Day47 = () => {
                     <strong> ➡️ Explanation of Question 139 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 47)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Reserved word: let - used to declare a block-scoped 
+// local variable
+let count = 5;
+
+// Reserved word: if - used to execute a block of code
+//  if a specified condition is true
+if (count > 0) {
+  console.log("Count is greater than 0.");
+}
+
+// Reserved word: return - used to exit a function and r
+// eturn a value from that function
+function add(a, b) {
+  return a + b;
+}
+
+// Demonstrates valid use cases for the reserved 
+// words 'let', 'if', and 'return'.
               `}
                         </pre>
                       </code>
@@ -131,9 +131,16 @@ const Day47 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Attempting to use a reserved word as a variable name
+// let if = 5; // This line would cause a syntax error
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(
+  "Using a reserved word as a variable name causes a 
+  syntax error in JavaScript."
+);
+
+// It's important to avoid using reserved words as 
+// identifiers to prevent these errors.
 `}
                         </pre>
                       </code>
@@ -184,12 +191,25 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Example use of the 'await' reserved word 
+// in asynchronous JavaScript
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+async function fetchData() {
+  // Assuming fetchSomething returns a Promise
+  const data = await fetchSomething();
+  console.log(data);
+  // The 'await' keyword pauses the execution until the 
+  // Promise settles, and then resumes with the resolved value.
+}
+
+console.log(
+  "The 'await' keyword allows asynchronous, promise-based
+  behavior to be written in a cleaner, more linear fashion."
+);
+
+// This demonstrates how 'await' improves readability and 
+// flow in asynchronous code.
+
               `}
                         </pre>
                       </code>

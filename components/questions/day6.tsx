@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day6 = () => {
   const handleCopyCode = () => {
@@ -61,60 +60,27 @@ const Day6 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 1 </strong>
+                    <strong> ➡️ Explanation of Question 16 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br />
-                    <br />
-                    <strong>What is TypeScript? </strong>
-                    TypeScript is a programming language that builds on
-                    JavaScript by adding static types, which can help catch
-                    errors early in the development process.{" "}
-                    <strong>
-                      <a
-                        href="https://www.javatpoint.com/typescript-installation"
-                        target="_blank"
-                      >
-                        Installation
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
-                    <strong>What is VS Code? </strong>
-                    Visual Studio Code (VS Code) is a free, powerful code editor
-                    made by Microsoft that supports many programming languages
-                    and has a vast array of extensions.{" "}
-                    <strong>
-                      <a
-                        href="https://code.visualstudio.com/Download"
-                        target="_blank"
-                      >
-                        Download
-                      </a>{" "}
-                    </strong>
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let guests: string[] = ["Albert Einstein", "Marie Curie", "Leonardo Vinci"];
+console.log("Great news! I found a bigger dinner table!");
+
+// Adding more guests
+guests.unshift("Isaac Newton");
+guests.splice(guests.length / 2, 0, "Charles Darwin");
+guests.push("Ada Lovelace");
+
+guests.forEach(guest => {
+    console.log(\`Dear \${guest}, would you like to join me for dinner?\`);
+});
               `}
                         </pre>
                       </code>
@@ -168,9 +134,33 @@ const Day6 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Q16 Answer:
+let guests: string[] = ["Albert Einstein", "Marie Curie", "Leonardo Vinci"];
+console.log("Great news! I found a bigger dinner table!");
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Adding more guests
+guests.unshift("Isaac Newton");
+guests.splice(guests.length / 2, 0, "Charles Darwin");
+guests.push("Ada Lovelace");
+
+guests.forEach(guest => {
+    console.log(\`Dear \${guest}, would you like to join me for dinner?\`);
+});
+
+// Q17 Answer:
+console.log("Unfortunately, I can only invite two people for dinner.");
+
+while (guests.length > 2) {
+    let removedGuest = guests.pop();
+    console.log(\`Sorry, \${removedGuest}, I can't invite you to dinner.\`);
+}
+
+guests.forEach(guest => {
+    console.log(\`Dear \${guest}, you're still invited to dinner.\`);
+});
+
+guests.splice(0, guests.length);
+console.log(guests); // Shows an empty list
 `}
                         </pre>
                       </code>
@@ -228,12 +218,29 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let places: string[] = ["NZ", "Iceland", "Japan", "Switzerland", "Norway"];
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+console.log("Original order:", places);
+
+console.log("Alphabetical order:", [...places].sort());
+
+console.log("Original order:", places);
+
+console.log("Reverse alphabetical order:", [...places].sort().reverse());
+
+console.log("Original order:", places);
+
+places.reverse();
+console.log("Reversed order:", places);
+
+places.reverse();
+console.log("Original order:", places);
+
+places.sort();
+console.log("Alphabetical order:", places);
+
+places.reverse();
+console.log("Reverse alphabetical order:", places);
               `}
                         </pre>
                       </code>

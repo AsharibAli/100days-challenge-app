@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day37 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,20 @@ const Day37 = () => {
                     <strong> ➡️ Explanation of Question 109 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 37)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Checks the current hour and logs "Good Morning" if it's before 12 PM
+const currentTime = new Date();
+if (currentTime.getHours() < 12) {
+  console.log("Good Morning"); // It's morning if before 12 PM
+}
+// This simple check helps us greet users appropriately 
+// based on the time of day.
               `}
                         </pre>
                       </code>
@@ -131,9 +120,23 @@ const Day37 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+function assignGrade(score: number): string {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 80) {
+    return "B";
+  } else if (score >= 70) {
+    return "C";
+  } else if (score >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(assignGrade(85)); // Outputs: B
+console.log(assignGrade(55)); // Outputs: F
+
 `}
                         </pre>
                       </code>
@@ -184,12 +187,21 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function categorizes a person's age group
+function categorizeAge(age: number): string {
+  if (age < 13) {
+    return "child";
+  } else if (age <= 19) {
+    return "teenager";
+  } else {
+    return "adult";
+  }
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+console.log(categorizeAge(12)); // Outputs: child
+console.log(categorizeAge(18)); // Outputs: teenager
+console.log(categorizeAge(25)); // Outputs: adult
+// Based on the age provided, we log the corresponding age group.
               `}
                         </pre>
                       </code>

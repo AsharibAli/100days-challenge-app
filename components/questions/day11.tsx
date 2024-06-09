@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day11 = () => {
   const handleCopyCode = () => {
@@ -65,30 +64,24 @@ const Day11 = () => {
                     <strong> ➡️ Explanation of Question 31 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let usernames: string[] = [];
+
+if(usernames.length === 0){
+    console.log("We need to find some users!");
+    
+} else {
+    // Greet Users 
+}
+
+// Removing all usernames ensures the message
+// "We need to find some users!" is printed.
               `}
                         </pre>
                       </code>
@@ -145,9 +138,21 @@ const Day11 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let current_users: string[] = ["user1", "admin", "user3", "user4", "user5"];
+let new_users: string[] = ["User1", "User6", "user7", "admin", "User9"];
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+new_users.forEach((newUser) => {
+  if (
+    current_users.some(
+      (currentUser) => currentUser.toLowerCase() === newUser.toLowerCase()
+    )
+  ) {
+    console.log(\`\${newUser} will need to enter a new username.\`);
+  } else {
+    console.log(\`\${newUser} is available.\`);
+  }
+});
+
 `}
                         </pre>
                       </code>
@@ -205,12 +210,20 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+numbers.forEach((number) => {
+  let suffix = "th";
+  if (number === 1) {
+    suffix = "st";
+  } else if (number === 2) {
+    suffix = "nd";
+  } else if (number === 3) {
+    suffix = "rd";
+  }
+  console.log(\`\${number}\${suffix}\`);
+});
+
               `}
                         </pre>
                       </code>

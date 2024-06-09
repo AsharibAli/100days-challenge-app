@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day38 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,21 @@ const Day38 = () => {
                     <strong> ➡️ Explanation of Question 112 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 38)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Creates a new Map to store countries and their capitals
+const countries = new Map<string, string>();
+countries.set("USA", "Washington, D.C."); // Adds USA to the Map
+countries.set("France", "Paris"); // Adds France to the Map
+countries.set("Japan", "Tokyo"); // Adds Japan to the Map
+
+console.log(countries);
+// Logs the Map with the countries and their capitals.
               `}
                         </pre>
                       </code>
@@ -131,9 +121,30 @@ const Day38 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Answer of Q12:
+// Creates a new Map to store countries and their capitals
+const countries = new Map<string, string>();
+countries.set("USA", "Washington, D.C."); // Adds USA to the Map
+countries.set("France", "Paris"); // Adds France to the Map
+countries.set("Japan", "Tokyo"); // Adds Japan to the Map
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(countries);
+// Logs the Map with the countries and their capitals.
+
+// Answer of Q13:
+// This function checks for "Canada" in the Map and logs its capital
+function logCapitalOfCanada(countries: Map<string, string>): void {
+  if (countries.has("Canada")) {
+    console.log(\`The capital of Canada is \${countries.get("Canada")}\`);
+  } else {
+    console.log("Canada is not in the Map.");
+  }
+}
+
+// Assuming countries Map from Question 112
+logCapitalOfCanada(countries);
+// Checks if Canada is in our Map and logs the capital if it exists.
+
 `}
                         </pre>
                       </code>
@@ -184,12 +195,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Creates a Map to store student IDs (keys) and names (values)
+const students = new Map<number, string>();
+students.set(1, "Alice");
+students.set(2, "Bob");
+students.set(3, "Charlie");
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Iterates over the Map and logs each student ID and name
+students.forEach((name, id) => {
+  console.log(\`Student ID: \${id}, Name: \${name}\`);
+});
+// This loop goes through each student and logs their ID and name.
+
               `}
                         </pre>
                       </code>

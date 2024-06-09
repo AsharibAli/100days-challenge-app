@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day2 = () => {
   const handleCopyCode = () => {
@@ -58,45 +57,12 @@ const Day2 = () => {
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 1 </strong>
+                    <strong> ➡️ Explanation of Question 4 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br />
-                    <br />
-                    <strong>What is TypeScript? </strong>
-                    TypeScript is a programming language that builds on
-                    JavaScript by adding static types, which can help catch
-                    errors early in the development process.{" "}
-                    <strong>
-                      <a
-                        href="https://www.javatpoint.com/typescript-installation"
-                        target="_blank"
-                      >
-                        Installation
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
-                    <strong>What is VS Code? </strong>
-                    Visual Studio Code (VS Code) is a free, powerful code editor
-                    made by Microsoft that supports many programming languages
-                    and has a vast array of extensions.{" "}
-                    <strong>
-                      <a
-                        href="https://code.visualstudio.com/Download"
-                        target="_blank"
-                      >
-                        Download
-                      </a>{" "}
-                    </strong>
+                    apps, command line tools and scripts.
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
@@ -144,7 +110,7 @@ never tried anything new.”');
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong>➡️ Explanation of Question 2</strong>
+                    <strong>➡️ Explanation of Question 5</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`This code defines a variable myName with the value "Asharib"
@@ -200,7 +166,7 @@ console.log(message);
               <AlertDialogContent className="w-full max-w-2xl p-4 md:p-6">
                 <AlertDialogHeader>
                   <AlertDialogTitle>
-                    <strong> ➡️ Explanation of Question 3 </strong>
+                    <strong> ➡️ Explanation of Question 6 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
@@ -212,9 +178,9 @@ console.log(message);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "\t\n Asharib \t\n"; 
+let myName: string = "\\t\\n Asharib \\t\\n"; 
 
-console.log(myName); 
+console.log(myName);
 console.log(myName.trim()); 
 `}
                         </pre>

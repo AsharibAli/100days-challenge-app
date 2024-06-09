@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day18 = () => {
   const handleCopyCode = () => {
@@ -60,30 +59,27 @@ const Day18 = () => {
                     <strong> ➡️ Explanation of Question 52 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Sets up details about a smartphone
+let smartphone = {
+  make: "Samsung",
+  model: "Galaxy S21",
+  specs: {
+    storage: "128GB",
+    screenSize: "6.2 inches",
+    batteryLife: "18 hours",
+  },
+};
+
+// Shows what we've set up about the smartphone
+console.log(smartphone);
+
               `}
                         </pre>
                       </code>
@@ -135,9 +131,22 @@ const Day18 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// A list showing a programmer's skills in detail
+let developerSkills = {
+  languages: ["JavaScript", "TypeScript", "Python"],
+  frameworks: ["React", "Angular", "Vue"],
+  tools: ["Git", "Webpack", "Docker"],
+};
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Getting specific skills from the list
+let { languages, frameworks, tools } = developerSkills;
+
+// Showing a skill from each category
+console.log(
+  \`Language: \${languages[0]}, Framework: \${frameworks[0]}, Tool: 
+  \${tools[0]}\`
+);
+
 `}
                         </pre>
                       </code>
@@ -189,12 +198,20 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// A way to make a flexible list
+function createObjectWithDynamicKey(key: string, value: string) {
+  let dynamicObject = {};
+  // Setting up a section in the list with a changeable name
+  dynamicObject[key] = value;
+  return dynamicObject;
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Using the flexible list setup for a user's preference
+let userPreference = createObjectWithDynamicKey("theme", "dark");
+
+// Showing the user's choice
+console.log(userPreference);
+
               `}
                         </pre>
                       </code>

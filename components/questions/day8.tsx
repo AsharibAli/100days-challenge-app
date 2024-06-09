@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day8 = () => {
   const handleCopyCode = () => {
@@ -60,57 +59,20 @@ const Day8 = () => {
                     <strong> ➡️ Explanation of Question 22 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br />
-                    <br />
-                    <strong>What is TypeScript? </strong>
-                    TypeScript is a programming language that builds on
-                    JavaScript by adding static types, which can help catch
-                    errors early in the development process.{" "}
-                    <strong>
-                      <a
-                        href="https://www.javatpoint.com/typescript-installation"
-                        target="_blank"
-                      >
-                        Installation
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
-                    <strong>What is VS Code? </strong>
-                    Visual Studio Code (VS Code) is a free, powerful code editor
-                    made by Microsoft that supports many programming languages
-                    and has a vast array of extensions.{" "}
-                    <strong>
-                      <a
-                        href="https://code.visualstudio.com/Download"
-                        target="_blank"
-                      >
-                        Download
-                      </a>{" "}
-                    </strong>
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let friends: string[] = ["Alice", "Bob", "Charlie"];
+
+console.log(friends[3]); // Intentional error: Arrays are
+zero-indexed, so index 3 is out of bounds.
+
+friends[2] = "Charlie"; // Correcting the error by accessing a valid index.
+
               `}
                         </pre>
                       </code>
@@ -164,9 +126,16 @@ const Day8 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let car = "subaru";
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log("Is car == 'subaru'? I predict true");
+console.log(car == "subaru");
+
+console.log("Is car == 'toyota'? I predict false");
+console.log(car == "toyota");
+
+// Create at least 10 tests. Have at least 5 tests evaluate to 
+// True and another 5 tests evaluate to False.
 `}
                         </pre>
                       </code>
@@ -222,12 +191,33 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Equality with strings
+console.log("Testing equality with strings:");
+console.log("apple" == "apple"); // True
+console.log("apple" == "Apple"); // False
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Using the lower case function
+console.log("Testing with lower case:");
+console.log("Apple".toLowerCase() == "apple"); // True
+
+// Numerical tests
+console.log("Numerical tests:");
+console.log(10 > 5); // True
+console.log(2 < 1); // False
+
+// Tests using "and" and "or" operators
+console.log("Tests with 'and' and 'or':");
+console.log(true && false); // False
+console.log(true || false); // True
+
+// Test whether an item is in a array
+let fruits = ["apple", "banana", "cherry"];
+console.log("Is 'apple' in fruits?");
+console.log(fruits.includes("apple")); // True
+
+// Test whether an item is not in a array
+console.log("Is 'mango' not in fruits?");
+console.log(!fruits.includes("mango")); // True
               `}
                         </pre>
                       </code>

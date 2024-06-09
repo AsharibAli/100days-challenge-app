@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day50 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,20 @@ const Day50 = () => {
                     <strong> ➡️ Explanation of Question 147 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-50">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 50)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Uses setTimeout to log a message after a 2-second delay
+
+setTimeout(() => {
+  console.log("This message is shown after a 2-second delay.");
+}, 2000);
+
+// This showcases how to use setTimeout to delay actions in your code.
               `}
                         </pre>
                       </code>
@@ -130,9 +119,17 @@ const Day50 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-50">
                           {`
-let myName: string = "Asharib";
+console.log("Start");
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+setTimeout(() => {
+  console.log("Callback executed"); 
+  // This gets queued to be executed by the event loop
+}, 0);
+
+console.log("End");
+// Although the timeout is 0, "Callback executed" 
+// is logged after "End" due to the event loop.
+
 `}
                         </pre>
                       </code>
@@ -183,12 +180,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-50">
                           {`
-let myName: string = "Asharib";
+// Synchronous example
+console.log("Before synchronous operation");
+// Simulate a synchronous blocking operation
+for (let i = 0; i < 1e9; i++) {} // A long loop
+console.log("After synchronous operation");
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Asynchronous example
+console.log("Before asynchronous operation");
+setTimeout(() => {
+  console.log("Asynchronous operation completed");
+}, 1000);
+console.log("After asynchronous operation setup");
+
+// Demonstrates how the rest of the code continues 
+// to execute without waiting for the asynchronous operation.
+
               `}
                         </pre>
                       </code>

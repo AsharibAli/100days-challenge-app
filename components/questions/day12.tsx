@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day12 = () => {
   const handleCopyCode = () => {
@@ -65,30 +64,20 @@ const Day12 = () => {
                     <strong> ➡️ Explanation of Question 34 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let pizzas: string[] = ["pepperoni", "margherita", "hawaiian"];
+
+pizzas.forEach(pizza => {
+console.log(\`I like \${pizza} pizza.\`);
+});
+
+console.log("I really love pizza!");
               `}
                         </pre>
                       </code>
@@ -145,9 +134,14 @@ const Day12 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let animals: string[] = ["dog", "cat", "rabbit"];
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+animals.forEach((animal) => {
+  console.log(\`A \${animal} would make a great pet.\`);
+});
+
+console.log("Any of these animals would make a great pet!");
+
 `}
                         </pre>
                       </code>
@@ -179,12 +173,6 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
             and the text of a message that should be printed on the shirt. The
             function should print a sentence summarizing the size of the shirt
             and the message printed on it. Call the function.{" "}
-            {/* <a
-              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-12"
-              target="_blank"
-            >
-              full-question
-            </a> */}
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -206,12 +194,15 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+function make_shirt(size: string, message: string) {
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+  console.log(
+    \`Making a \${size} t-shirt with the message "\${message}" printed on it\`
+  );
+}
+
+make_shirt("medium", "Code is Life");
+
               `}
                         </pre>
                       </code>

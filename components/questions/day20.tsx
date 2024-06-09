@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day20 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,23 @@ const Day20 = () => {
                     <strong> ➡️ Explanation of Question 58 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This program calculates the average of all scores given
+function averageScore(...scores: number[]): number {
+  // Adds all scores together and divides by the number of scores
+  let total = scores.reduce((sum, score) => sum + score, 0);
+  return total / scores.length;
+}
+
+// Example: finding the average of four scores
+console.log(averageScore(80, 90, 100, 70)); // Shows the average score
+// We add up all the scores, then divide by how many there are.
               `}
                         </pre>
                       </code>
@@ -132,9 +124,19 @@ const Day20 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This program makes a function that adds a specific number
+function makeAdder(valueToAdd: number): (number) => number {
+  // It takes a number and adds your special number to it
+  return function (number: number): number {
+    return number + valueToAdd;
+  };
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Making a magic box that adds 5
+let addFive = makeAdder(5);
+
+console.log(addFive(10)); // If we put 10 in the box, it gives us 15
+// We made a function (magic box) that adds 5 to any number.
 `}
                         </pre>
                       </code>
@@ -185,12 +187,24 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This profile sets itself up and can share info about the user
+let userProfile = (function () {
+  // The user's details are kept inside
+  let name = "John";
+  let age = 30;
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+  // This part shares the user's details
+  return {
+    displayInfo: function () {
+      console.log(\`Name: \${name}, Age: \${age}\`);
+    },
+  };
+})();
+
+// Asking the profile to tell us about the user
+userProfile.displayInfo(); // It says the user's name and age
+// We made a self-setup profile that can talk about the user.
+
               `}
                         </pre>
                       </code>

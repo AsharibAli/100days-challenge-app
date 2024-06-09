@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day27 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,25 @@ const Day27 = () => {
                     <strong> ➡️ Explanation of Question 79 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 27)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This sets up an object for a car with specific details
+let car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2020,
+};
+
+// Accessing and showing the car's model
+console.log(car.model); // Outputs: Corolla
+// We use dot notation (car.model) to get the model of the
+// car from our object.
+
               `}
                         </pre>
                       </code>
@@ -133,9 +127,21 @@ const Day27 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Starting with our car object
+let car = {
+  make: "Toyota",
+  model: "Corolla",
+  year: 2020,
+};
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Adding a new property 'color' and updating 'year'
+car.color = "blue"; // Adds a new property 'color'
+car.year = 2021; // Updates the 'year' property
+
+// Showing the updated car object
+console.log(car); // Outputs the car object 
+// Now our car is blue and its model year is updated to 2021.
+
 `}
                         </pre>
                       </code>
@@ -186,12 +192,23 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function shows every detail about an object
+function logObjectProperties(obj: object) {
+  for (let property in obj) {
+    // Loops through each property in the object
+    console.log(\`\${property}: \${obj[property]}\`);
+    // Shows the property name and its value
+  }
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Using the function with a car object
+logObjectProperties({
+  make: "Toyota",
+  model: "Corolla",
+  year: 2021,
+  color: "blue",
+});
+// It tells us each piece of information stored about the car.
               `}
                         </pre>
                       </code>

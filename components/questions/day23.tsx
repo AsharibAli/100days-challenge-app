@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day23 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,24 @@ const Day23 = () => {
                     <strong> ➡️ Explanation of Question 67 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function adds a number and a string that represents a number
+function addNumberAndString(number1: number, numberString: string):
+number {
+  // Converts the string to a number and adds it to the first number
+  return number1 + Number(numberString);
+}
+
+// Trying it with 10 and "5"
+console.log(addNumberAndString(10, "5")); // Shows 15
+// The string "5" is turned into the number 5, and then added to 10.
+
               `}
                         </pre>
                       </code>
@@ -133,9 +126,15 @@ const Day23 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function multiplies two decimal numbers
+function multiplyDecimals(num1: number, num2: number): number {
+  // Multiplies the numbers and rounds the result to two decimal places
+  return Math.round(num1 * num2 * 100) / 100;
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Trying it with 0.1 and 0.2
+console.log(multiplyDecimals(0.1, 0.2)); // Shows 0.02
+// After multiplying, we round to make the result easier to read.
 `}
                         </pre>
                       </code>
@@ -187,12 +186,21 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function divides two numbers and finds the quotient and remainder
+function divideAndRemainder(
+  dividend: number,
+  divisor: number
+): { quotient: number; remainder: number } {
+  // Calculates the quotient and remainder
+  let quotient = Math.floor(dividend / divisor);
+  let remainder = dividend % divisor;
+  // Returns both in an object
+  return { quotient, remainder };
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Trying it with 10 divided by 3
+console.log(divideAndRemainder(10, 3)); 
+// It shows how many times 3 goes into 10, and what's left over.
               `}
                         </pre>
                       </code>

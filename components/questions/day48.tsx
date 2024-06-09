@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day48 = () => {
   const handleCopyCode = () => {
@@ -57,30 +56,25 @@ const Day48 = () => {
                     <strong> ➡️ Explanation of Question 142 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 48)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Creates a Promise that resolves with "Hello, World!"
+// after 2 seconds
+
+const helloPromise = new Promise<string>((resolve) => {
+  setTimeout(() => {
+    resolve("Hello, World!");
+  }, 2000);
+});
+
+helloPromise.then((message) => console.log(message));
+// After 2 seconds, "Hello, World!" will be logged to the console.
+
               `}
                         </pre>
                       </code>
@@ -130,9 +124,29 @@ const Day48 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Creates a Promise that either resolves or rejects 
+based on a condition
+const conditionalPromise = new Promise<string>
+((resolve, reject) => {
+  const success = Math.random() > 0.5; 
+  // Randomly choose success or failure
+  if (success) {
+    resolve("Success!");
+  } else {
+    reject(new Error("Failure"));
+  }
+});
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+conditionalPromise
+// Handles a successful resolution
+  .then((result) => console.log(result)) 
+
+   // Handles a rejection
+  .catch((error) => console.log(error.message));
+
+// This code will randomly log either "Success!"
+// or "Failure" based on the outcome of the promise.
+
 `}
                         </pre>
                       </code>
@@ -180,12 +194,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Example using Promise.all to wait for multiple
+// promises to resolve
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise<string>((resolve) => {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values); // Outputs: [3, 42, "foo"]
+});
+
+// This demonstrates how Promise.all waits for all
+// promises to resolve and then logs the array of their results.
+
               `}
                         </pre>
                       </code>

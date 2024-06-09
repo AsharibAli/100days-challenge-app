@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day21 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,25 @@ const Day21 = () => {
                     <strong> ➡️ Explanation of Question 61 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Making a list (enum) for different types of vehicles
+enum VehicleType {
+  Car,
+  Truck,
+  Motorcycle,
+}
+
+// Showing one type of vehicle from the list
+console.log(VehicleType.Car); 
+// It shows 0 because enums start counting from 0
+// Here, we're just checking what number the Car category got in our list.
+
               `}
                         </pre>
                       </code>
@@ -132,9 +126,25 @@ const Day21 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Creating a blueprint (interface) for student information
+interface Student {
+  name: string;
+  age: number;
+  courses: string[];
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Filling in the blueprint with an example student
+let student: Student = {
+  name: "Alice",
+  age: 22,
+  courses: ["Math", "Science", "History"],
+};
+
+// Showing the student's information
+console.log(student);
+// We're using the blueprint to make sure our student has a name,
+// age, and list of courses.
+
 `}
                         </pre>
                       </code>
@@ -186,12 +196,32 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Creating a custom type for shapes that could be circles or rectangles
+type Shape = {
+  kind: "circle" | "rectangle";
+  radius?: number; // Only for circles
+  width?: number; // Only for rectangles
+  height?: number; // Only for rectangles
+};
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Describing a circle using our Shape type
+let circle: Shape = {
+  kind: "circle",
+  radius: 5,
+};
+
+// Describing a rectangle using our Shape type
+let rectangle: Shape = {
+  kind: "rectangle",
+  width: 10,
+  height: 20,
+};
+
+// Showing what we described
+console.log(circle); // Here's the circle
+console.log(rectangle); // And here's the rectangle
+// We made a flexible program that can describe different shapes in detail.
+
               `}
                         </pre>
                       </code>

@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day45 = () => {
   const handleCopyCode = () => {
@@ -55,30 +54,28 @@ const Day45 = () => {
                     <strong> ➡️ Explanation of Question 133 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 45)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Defines a JavaScript object
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "Wonderland",
+};
+
+// Converts the object into a JSON string
+const jsonString = JSON.stringify(person);
+
+console.log(jsonString); 
+// Outputs: {"name":"Alice","age":30,"city":"Wonderland"}
+// Demonstrates converting an object to a JSON string,
+//  making it easy to store or transmit.
+
               `}
                         </pre>
                       </code>
@@ -125,9 +122,16 @@ const Day45 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Defines a JSON string
+const jsonString = '{"name":"Alice","age":30,"city":"Wonderland"}';
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Parses the JSON string back into a JavaScript object
+const person = JSON.parse(jsonString);
+
+console.log(person); // Outputs the original object
+// This snippet shows how to take a JSON string and
+// convert it back into a JavaScript object.
+
 `}
                         </pre>
                       </code>
@@ -178,12 +182,27 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Reusing the person object from Question 133
+const person = {
+  name: "Alice",
+  age: 30,
+  city: "Wonderland",
+};
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Converts the object into a JSON string with indentation
+const jsonString = JSON.stringify(person, null, 2); 
+// The '2' specifies the number of spaces to use as white space
+
+console.log(jsonString);
+/* Outputs:
+{
+  "name": "Alice",
+  "age": 30,
+  "city": "Wonderland"
+}
+*/
+// Shows how adding indentation to the JSON string 
+// makes it easier to read.
               `}
                         </pre>
                       </code>

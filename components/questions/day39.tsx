@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day39 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,47 @@ const Day39 = () => {
                     <strong> ➡️ Explanation of Question 115 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 39)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function logs the day of the week based on a number (1-7)
+function logDayOfWeek(dayNumber: number): void {
+  switch (dayNumber) {
+    case 1:
+      console.log("Sunday");
+      break;
+    case 2:
+      console.log("Monday");
+      break;
+    case 3:
+      console.log("Tuesday");
+      break;
+    case 4:
+      console.log("Wednesday");
+      break;
+    case 5:
+      console.log("Thursday");
+      break;
+    case 6:
+      console.log("Friday");
+      break;
+    case 7:
+      console.log("Saturday");
+      break;
+    default:
+      console.log("Invalid day number");
+      break;
+  }
+}
+
+logDayOfWeek(3); // Outputs: Tuesday
+// Uses a switch statement to select the appropriate day based
+// on the provided number.
+
               `}
                         </pre>
                       </code>
@@ -131,9 +147,38 @@ const Day39 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function logs the season based on the month
+function logSeason(month: number): void {
+  switch (month) {
+    case 12:
+    case 1:
+    case 2:
+      console.log("Winter");
+      break;
+    case 3:
+    case 4:
+    case 5:
+      console.log("Spring");
+      break;
+    case 6:
+    case 7:
+    case 8:
+      console.log("Summer");
+      break;
+    case 9:
+    case 10:
+    case 11:
+      console.log("Fall");
+      break;
+    default:
+      console.log("Invalid month");
+      break;
+  }
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+logSeason(4); // Outputs: Spring
+// Multiple cases share the same code block to represent each season.
+
 `}
                         </pre>
                       </code>
@@ -184,12 +229,34 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function evaluates a grade and logs the corresponding remark
+function evaluateGrade(grade: string): void {
+  switch (grade) {
+    case "A":
+      console.log("Excellent");
+      break;
+    case "B":
+      console.log("Good");
+      break;
+    case "C":
+      console.log("Fair");
+      break;
+    case "D":
+      console.log("Poor");
+      break;
+    case "F":
+      console.log("Fail");
+      break;
+    default:
+      console.log("Invalid grade");
+      break;
+  }
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+evaluateGrade("B"); // Outputs: Good
+// Uses a switch statement to evaluate the grade and defaults 
+// to "Invalid grade" if no match is found.
+
               `}
                         </pre>
                       </code>

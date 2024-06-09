@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day36 = () => {
   const handleCopyCode = () => {
@@ -57,30 +56,24 @@ const Day36 = () => {
                     <strong> ➡️ Explanation of Question 106 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 36)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function checks if a year is a leap year
+function isLeapYear(year: number): boolean {
+  // Checks the conditions for a leap year
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+console.log(isLeapYear(2020)); // Outputs: true
+console.log(isLeapYear(1900)); // Outputs: false
+// By using comparison operators,
+// we can easily determine if a year is a leap year or not.
+
               `}
                         </pre>
                       </code>
@@ -130,9 +123,16 @@ const Day36 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function checks if a number is divisible by both 2 and 3
+function isDivisibleByTwoAndThree(number: number): boolean {
+  // Uses the modulo operator to check for no remainder
+  return number % 2 === 0 && number % 3 === 0;
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(isDivisibleByTwoAndThree(12)); // Outputs: true
+console.log(isDivisibleByTwoAndThree(14)); // Outputs: false
+// Logical operators help us verify the number's divisibility 
+// by both 2 and 3.
 `}
                         </pre>
                       </code>
@@ -183,12 +183,16 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function compares two strings, ignoring case sensitivity
+function areStringsEqualIgnoreCase(str1: string, str2: string): boolean {
+  // Converts both strings to lowercase before comparison
+  return str1.toLowerCase() === str2.toLowerCase();
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+console.log(areStringsEqualIgnoreCase("hello", "Hello")); // Outputs: true
+console.log(areStringsEqualIgnoreCase("world", "Word")); // Outputs: false
+// We make both strings lowercase to ensure the comparison ignores 
+// case differences.
               `}
                         </pre>
                       </code>

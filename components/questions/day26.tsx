@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day26 = () => {
   const handleCopyCode = () => {
@@ -59,30 +58,21 @@ const Day26 = () => {
                     <strong> ➡️ Explanation of Question 76 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 26)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This function adds two numbers and returns the result
+function addNumbers(num1: number, num2: number): number {
+  // Calculates the sum of num1 and num2
+  return num1 + num2;
+}
+
+// Calling the function with two numbers and logging the result
+console.log(addNumbers(5, 7)); // Outputs 12
               `}
                         </pre>
                       </code>
@@ -133,9 +123,20 @@ const Day26 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function greets a user by name, 
+// or greets an anonymous user if no name is provided
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+function greetUser(name: string = "anonymous") {
+  // Says hello to the given name or to an anonymous user
+  console.log(\`Hello, \${name}!\`);
+}
+
+// Trying the function with a name and without
+greetUser("Alice"); // Outputs: Hello, Alice!
+greetUser(); // Outputs: Hello, anonymous!
+// We see how our function can say hello to 
+// someone by name, or just say hello if we don't know the name.
+
 `}
                         </pre>
                       </code>
@@ -187,12 +188,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Function declaration for squaring a number
+function squareDeclaration(number: number): number {
+  return number * number;
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Function expression for squaring a number
+const squareExpression = function (number: number): number {
+  return number * number;
+};
+
+// Using both functions to square the number 4
+console.log(squareDeclaration(4)); // Outputs: 16
+console.log(squareExpression(4)); // Outputs: 16
+// Both methods give us the same result, showing two
+// different ways to create functions that do the same thing.
+
               `}
                         </pre>
                       </code>

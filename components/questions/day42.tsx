@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day42 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,27 @@ const Day42 = () => {
                     <strong> ➡️ Explanation of Question 124 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 42)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Defines an object with a name property and a method
+// to return its name
+const person = {
+  name: "Alice",
+  getName: function () {
+    return this.name;
+  // Uses 'this' to refer to the object itself
+  // and return its 'name' property
+  },
+};
+
+console.log(person.getName()); // Outputs: Alice
+// This method correctly identifies and returns
+//  the object's 'name' property using 'this'.
               `}
                         </pre>
                       </code>
@@ -131,9 +127,21 @@ const Day42 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// An object with multiple properties and a method that
+// interacts with them using 'this'
+const rectangle = {
+  length: 4,
+  width: 5,
+  calculateArea: function () {
+    return this.length * this.width; 
+// 'this' accesses 'length' and 'width' properties of the object
+  },
+};
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(rectangle.calculateArea()); // Outputs: 20
+// The 'calculateArea' method uses 'this' to compute
+// the area based on the object's own dimensions.
+
 `}
                         </pre>
                       </code>
@@ -184,12 +192,28 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Demonstrates 'this' behavior change in a nested function
+const myObject = {
+  property: "Value",
+  outerMethod: function () {
+    console.log(this.property); 
+    // Works as expected, logs "Value"
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+    const innerMethod = () => {
+      console.log(this.property); 
+      // Still accesses myObject's 'property' due to 
+      // arrow function capturing 'this' from outer scope
+    };
+
+    innerMethod();
+  },
+};
+
+myObject.outerMethod();
+// This example shows that using an arrow function for
+// the inner method preserves the 'this' context from the
+// outer method.
+
               `}
                         </pre>
                       </code>

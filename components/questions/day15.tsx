@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day15 = () => {
   const handleCopyCode = () => {
@@ -50,12 +49,6 @@ const Day15 = () => {
             and store it in a separate array. Call show_magicians() with each
             array to show that you have one array of the original names and one
             array with the Great added to each magician’s name.{" "}
-            {/* <a
-              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-14"
-              target="_blank"
-            >
-              full-question
-            </a> */}
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -68,30 +61,37 @@ const Day15 = () => {
                     <strong> ➡️ Explanation of Question 43 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let magicians: string[] = ["Alice", "David", "Chris"];
+
+function make_great(magicians: string[]): string[] {
+  let greatMagicians = [];
+  magicians.forEach((magician) => {
+    greatMagicians.push(\`\${magician} the Great\`);
+});
+return greatMagicians;
+}
+
+function show_magicians(magicians: string[]) {
+  magicians.forEach((magician) => {
+    console.log(magician);
+  });
+}
+
+// Creates a new modified array
+let greatMagicians = make_great(magicians.slice()); 
+
+console.log("Original magicians:");
+show_magicians(magicians); // Shows original names
+console.log("Great magicians:");
+show_magicians(greatMagicians); // Shows modified names
+
               `}
                         </pre>
                       </code>
@@ -125,12 +125,6 @@ const Day15 = () => {
             print a summary of the sandwich that is being ordered. Call the
             function three times, using a different number of arguments each
             time.
-            {/* <a
-              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-12"
-              target="_blank"
-            >
-              full-question
-            </a> */}
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -151,9 +145,14 @@ const Day15 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+function make_sandwich(...items: string[]) {
+  console.log(\`Making a sandwich with: \${items.join(", ")}.\`);
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+make_sandwich("ham", "cheese");
+make_sandwich("turkey", "lettuce", "tomato");
+make_sandwich("avocado", "sprouts", "mustard", "mayo");
+
 `}
                         </pre>
                       </code>
@@ -188,12 +187,6 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
             other name-value pairs, such as a color or an optional feature.
             Print the Object that’s returned to make sure all the information
             was stored correctly.
-            {/* <a
-              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-13"
-              target="_blank"
-            >
-              full-question
-            </a> */}
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -215,12 +208,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+function make_car(
+  manufacturer: string,
+  model: string,
+  ...options: [string, any][]
+) {
+  let car = { manufacturer, model };
+  options.forEach(([key, value]) => (car[key] = value));
+  return car;
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+console.log(make_car("Toyota", "Carolla", ["color", "red"],
+["year", 2020]));
+
+console.log(make_car("Ford", "Fiesta", ["color", "blue"],
+["sunroof", true]));
+
               `}
                         </pre>
                       </code>

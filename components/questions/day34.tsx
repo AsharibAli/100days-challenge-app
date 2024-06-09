@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day34 = () => {
   const handleCopyCode = () => {
@@ -55,30 +54,18 @@ const Day34 = () => {
                     <strong> ➡️ Explanation of Question 100 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 34)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Finds the square root of 144
+const squareRoot: number = Math.sqrt(144);
+
+console.log(\`The square root of 144 is \${squareRoot}.\`);
+// This line will show that the square root of 144 is 12.
               `}
                         </pre>
                       </code>
@@ -125,9 +112,17 @@ const Day34 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Generates a random integer between 1 and 10
+function getRandomInt(): number {
+  return Math.floor(Math.random() * 10) + 1;
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(getRandomInt()); 
+// Outputs a random integer between 1 and 10
+
+// This function combines Math.random() with Math.floor() 
+to create a random integer within our range.
+
 `}
                         </pre>
                       </code>
@@ -178,12 +173,12 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Calculates the absolute difference between -5 and 5
+const difference: number = Math.abs(-5 - 5);
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+console.log(difference); // Outputs: 10
+// This line shows the absolute value of the difference
+// between -5 and 5, ignoring the sign.
               `}
                         </pre>
                       </code>

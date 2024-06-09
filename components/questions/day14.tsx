@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day14 = () => {
   const handleCopyCode = () => {
@@ -68,30 +67,24 @@ const Day14 = () => {
                     <strong> ➡️ Explanation of Question 40 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+function make_album(artist: string, title: string, tracks?: number) {
+  let album = { artist, title };
+  if (tracks) {
+    album["tracks"] = tracks;
+  }
+  return album;
+}
+
+console.log(make_album("Artist One", "The First Album"));
+console.log(make_album("Artist Two", "The Second Album"));
+console.log(make_album("Artist Three", "The Third Album", 12));
               `}
                         </pre>
                       </code>
@@ -122,12 +115,6 @@ const Day14 = () => {
             Magicians: Make a array of magician’s names. Pass the array to a
             function called show_magicians(), which prints the name of each
             magician in the array.
-            {/* <a
-              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-12"
-              target="_blank"
-            >
-              full-question
-            </a> */}
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -148,9 +135,15 @@ const Day14 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let magicians: string[] = ["Alice", "David", "Chris"];
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+function show_magicians(magicians: string[]) {
+  magicians.forEach((magician) => {
+    console.log(magician);
+  });
+}
+
+show_magicians(magicians);
 `}
                         </pre>
                       </code>
@@ -183,12 +176,6 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
             magicians by adding the phrase the Great to each magician’s name.
             Call show_magicians() to see that the list has actually been
             modified.{" "}
-            {/* <a
-              href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-13"
-              target="_blank"
-            >
-              full-question
-            </a> */}
           </p>
           <div className="p-2">
             <AlertDialog>
@@ -210,12 +197,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let magicians: string[] = ["Alice", "David", "Chris"];
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+function show_magicians(magicians: string[]) {
+  magicians.forEach((magician) => {
+    console.log(magician);
+  });
+}
+
+function make_great(magicians: string[]) {
+  for (let i = 0; i < magicians.length; i++) {
+    magicians[i] = magicians[i] + " the Great";
+  }
+}
+
+make_great(magicians); // Modifies the original array
+show_magicians(magicians); // Shows modified names
               `}
                         </pre>
                       </code>

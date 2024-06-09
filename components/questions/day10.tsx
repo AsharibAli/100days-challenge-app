@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day10 = () => {
   const handleCopyCode = () => {
@@ -64,57 +63,28 @@ const Day10 = () => {
                     <strong> ➡️ Explanation of Question 28 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br />
-                    <br />
-                    <strong>What is TypeScript? </strong>
-                    TypeScript is a programming language that builds on
-                    JavaScript by adding static types, which can help catch
-                    errors early in the development process.{" "}
-                    <strong>
-                      <a
-                        href="https://www.javatpoint.com/typescript-installation"
-                        target="_blank"
-                      >
-                        Installation
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
-                    <strong>What is VS Code? </strong>
-                    Visual Studio Code (VS Code) is a free, powerful code editor
-                    made by Microsoft that supports many programming languages
-                    and has a vast array of extensions.{" "}
-                    <strong>
-                      <a
-                        href="https://github.com/AsharibAli/100-days-of-code/tree/main/day-10"
-                        target="_blank"
-                      >
-                        Download
-                      </a>{" "}
-                    </strong>
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+let age: number = 25;
+
+if (age < 2) {
+  console.log("The person is a baby.");
+} else if (age < 4) {
+  console.log("The person is a toddler.");
+} else if (age < 13) {
+  console.log("The person is a kid.");
+} else if (age < 20) {
+  console.log("The person is a teenager.");
+} else if (age < 65) {
+  console.log("The person is an adult.");
+} else {
+  console.log("The person is an elder.");
+}
               `}
                         </pre>
                       </code>
@@ -171,9 +141,17 @@ const Day10 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let favorite_fruits: string[] = ["apples", "bananas", "cherries"];
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+if (favorite_fruits.includes("bananas")) {
+  console.log("You really like bananas!");
+}
+if (favorite_fruits.includes("apples")) {
+  console.log("You really like apples!");
+}
+
+// Continue with more fruits
+
 `}
                         </pre>
                       </code>
@@ -232,12 +210,15 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+let usernames: string[] = ["admin", "user1", "user2", "user3", "user4"];
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+usernames.forEach((username) => {
+  if (username == "admin") {
+    console.log("Hello admin, would you like to see a status report?");
+  } else {
+    console.log(\`Hello \${username}, thank you for loggin in again.\`);
+  }
+});
               `}
                         </pre>
                       </code>

@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day43 = () => {
   const handleCopyCode = () => {
@@ -55,30 +54,26 @@ const Day43 = () => {
                     <strong> ➡️ Explanation of Question 127 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 43)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Traditional function expression
+const traditionalFunction = function (a, b) {
+  return a + b;
+};
+
+// Converted to arrow function
+const arrowFunction = (a, b) => a + b;
+
+console.log(traditionalFunction(5, 3)); // Outputs: 8
+console.log(arrowFunction(5, 3)); // Outputs: 8
+// Demonstrates the conversion of a
+// traditional function expression to an arrow function.
+
               `}
                         </pre>
                       </code>
@@ -128,9 +123,14 @@ const Day43 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Arrow function that calculates the product of all its parameters
+const multiplyParameters = (...numbers: number[]) =>
+  numbers.reduce((total, number) => total * number, 1);
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+console.log(multiplyParameters(2, 3, 4)); // Outputs: 24
+// This function uses the rest parameter syntax to take 
+// any number of arguments, then multiplies them together.
+
 `}
                         </pre>
                       </code>
@@ -181,12 +181,28 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Demonstrating 'this' in traditional vs. arrow functions
+const traditionalVsArrow = {
+  value: "traditionalVsArrow value",
+  traditionalFunction: function () {
+    console.log("Traditional function:", this.value); 
+    'this' refers to traditionalVsArrow object
+  },
+  arrowFunction: () => {
+    console.log("Arrow function:", this.value); 
+    // 'this' is not bound to traditionalVsArrow object
+    //  but to the scope in which traditionalVsArrow was defined
+  },
+};
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+traditionalVsArrow.traditionalFunction();
+// Logs "traditionalVsArrow value"
+
+traditionalVsArrow.arrowFunction();
+// Likely undefined, depending on the outer scope's 'this.value'
+// This code snippet illustrates the difference in how 
+// 'this' is determined in traditional functions versus arrow functions.
+
               `}
                         </pre>
                       </code>

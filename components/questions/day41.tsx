@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day41 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,22 @@ const Day41 = () => {
                     <strong> ➡️ Explanation of Question 121 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 41)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// This for loop counts from 1 to 10 but skips 5
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    continue; // Skips the rest of the loop for i = 5
+  }
+  console.log(i); // Logs numbers 1-4 and 6-10
+}
+// It demonstrates how to use 'continue' to skip a specific iteration.
+
               `}
                         </pre>
                       </code>
@@ -131,9 +122,18 @@ const Day41 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Initializes the counter at 10
+let counter: number = 10;
+// This while loop counts down from 10 to 1 and stops at 5
+while (counter > 0) {
+  if (counter === 5) {
+    break; // Exits the loop when counter reaches 5
+  }
+  console.log(counter);
+  counter--; // Decrements the counter
+}
+// Logs the countdown from 10 but stops abruptly when it hits 5.
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
 `}
                         </pre>
                       </code>
@@ -184,12 +184,26 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function iterates through a string and logs each character 
+// until it finds a vowel
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+function logUntilVowel(str: string): void {
+  const vowels = "aeiouAEIOU";
+  for (const char of str) {
+    if (vowels.includes(char)) {
+      console.log(\`First vowel found: \${char}\`);
+      break; // Stops the loop at the first vowel found
+    }
+    console.log(char); 
+    // Logs each character until a vowel is encountered
+  }
+}
+
+logUntilVowel("syzygy");
+// Logs 's', 'y', 'z', 'y', and then 'First vowel found: y'
+// Demonstrates iterating through a string and stopping at
+// the first vowel.
+
               `}
                         </pre>
                       </code>

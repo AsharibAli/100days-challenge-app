@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day46 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,24 @@ const Day46 = () => {
                     <strong> ➡️ Explanation of Question 136 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 46)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Demonstrates using console.log() inside a loop to track 
+// variable values
+
+for (let i = 1; i <= 5; i++) {
+  console.log(\`Iteration \${i}, i value:, i\`);
+  // Logs the current iteration number and the value of i
+}
+
+// This loop iterates five times, logging the value of 'i'
+//  during each iteration to help with debugging.
+
               `}
                         </pre>
                       </code>
@@ -131,9 +124,17 @@ const Day46 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Demonstrates using a try-catch block to handle errors
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+try {
+  // Intentionally cause an error
+  throw new Error("Something went wrong");
+} catch (error) {
+  console.log(error.message); // Logs the error message
+}
+
+// This code tries to execute a block that throws an error,
+// and the catch block handles the error gracefully.
 `}
                         </pre>
                       </code>
@@ -184,12 +185,22 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// Sample code snippet for setting a breakpoint
+console.log("Before breakpoint");
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Set a breakpoint on the following line using your
+// browser's developer tools
+
+console.log(
+  "This line has a breakpoint set on it in the browser's developer tools"
+);
+
+console.log("After breakpoint");
+// To use breakpoints, open this code in your browser,
+// open the developer tools, navigate to the Source tab,
+// find this script, and click on the line number where 
+// you want to pause execution. When you reload or run
+// your page, execution will pause at the breakpoint.
               `}
                         </pre>
                       </code>

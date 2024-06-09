@@ -14,7 +14,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { useEffect } from "react";
 
 const Day32 = () => {
   const handleCopyCode = () => {
@@ -58,30 +57,21 @@ const Day32 = () => {
                     <strong> ➡️ Explanation of Question 94 </strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    <strong>What is Nodejs? </strong>
                     Node.js is a free, open-source, cross-platform JavaScript
                     runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.{" "}
-                    <strong>
-                      <a href="https://nodejs.org/en" target="_blank">
-                        Download
-                      </a>{" "}
-                    </strong>{" "}
-                    <br /> <br />
+                    apps, command line tools and scripts. <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
- // Calculates how many days are left until New Year's Day
- function daysUntilNewYear(): number {
-   const today = new Date();
-   const newYear = new Date(today.getFullYear() + 1, 0, 1); 
-   const diff = newYear.getTime() - today.getTime(); 
-   const days = Math.ceil(diff / (1000 * 60 * 60 * 32)); 
-   return days;
- }
- 
- console.log(daysUntilNewYear() + " days until New Year.");
+// Defines an array with some words
+const words: string[] = ["Hello", "World", "TypeScript", "JavaScript"];
+// Uses .map() to create a new array with the length of each word
+const lengths: number[] = words.map((word) => word.length);
+
+console.log(lengths); // Outputs: [5, 5, 10, 10]
+// Each number in the new array represents the 
+// length of the corresponding word in the original array.
               `}
                         </pre>
                       </code>
@@ -131,9 +121,15 @@ const Day32 = () => {
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function filters an array, keeping only numbers greater than 10
+function filterGreaterThanTen(numbers: number[]): number[] {
+  return numbers.filter((number) => number > 10);
+}
 
-console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
+// Example: Filtering an array of numbers
+const numbers: number[] = [5, 10, 15, 20, 25];
+console.log(filterGreaterThanTen(numbers)); // Outputs: [15, 20, 25]
+// The new array contains only the numbers that are greater than 10.
 `}
                         </pre>
                       </code>
@@ -184,12 +180,18 @@ console.log(\`Hello \${myName}, Want to learn some TypeScript today?\`);
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
                           {`
-let myName: string = "Asharib";
+// This function calculates the sum of all numbers in an array
+function calculateSum(numbers: number[]): number {
+  return numbers.reduce((accumulator, current) => 
+  accumulator + current, 0);
+}
 
-console.log(myName.toLowerCase()); 
-console.log(myName.toUpperCase()); 
-console.log(myName.charAt(0).toUpperCase() + myName.slice(1)
-.toLowerCase()); 
+// Example: Calculating the sum of an array of numbers
+const numbers: number[] = [1, 2, 3, 4, 5];
+console.log(calculateSum(numbers)); // Outputs: 15
+// It adds up all the numbers in the array,
+// resulting in a single sum value.
+
               `}
                         </pre>
                       </code>
