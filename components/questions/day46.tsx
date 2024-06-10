@@ -58,9 +58,7 @@ const Day46 = () => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.
+This code runs a loop five times, with the variable i starting at 1 and increasing by 1 each time until it reaches 5. During each iteration, it prints the current iteration number and the value of i to the console, which helps track and debug the loop's behavior.
 `}{" "}
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
@@ -119,7 +117,9 @@ for (let i = 1; i <= 5; i++) {
                     <strong>➡️ Explanation of Question 137</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`The code demonstrates error handling using a try-catch block. Inside the try block, it intentionally throws a new Error with the message "Something went wrong". The catch block catches this thrown error, assigns it to the variable error, and then logs error.message, which outputs "Something went wrong". This pattern allows graceful handling of errors, preventing them from crashing the application and providing an opportunity to log, report, or handle the error appropriately.`}
+                    {`
+                    This code uses a try-catch block to manage errors. In the try block, an error is intentionally thrown with the message "Something went wrong." The catch block catches this error and logs its message to the console, allowing the program to handle the error gracefully without crashing.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -177,7 +177,7 @@ try {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   The code demonstrates setting a breakpoint for debugging in browser developer tools. It logs a message, then has a commented instruction to set a breakpoint on the following line, which also logs a message. Another log follows. To use this, open the code in a browser, access developer tools (usually F12 or right-click > Inspect), go to the Sources tab, find this script, and click the line number of the desired breakpoint. Reloading or running the page will pause execution at the breakpoint, allowing inspection of variables and step-by-step debugging.
+                   This code snippet demonstrates where to set a breakpoint using your browser's developer tools. It includes three console log statements: one before the breakpoint, one where the breakpoint should be set, and one after. To use breakpoints, you need to open the code in your browser, go to the developer tools, find the script in the Source tab, and click on the line number you want to pause execution on. When you reload or run the page, the execution will pause at the breakpoint, allowing you to inspect the code's behavior.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

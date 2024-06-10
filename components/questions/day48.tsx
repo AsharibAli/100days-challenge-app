@@ -57,9 +57,8 @@ const Day48 = () => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.
+
+This code creates a Promise named helloPromise that resolves with the message "Hello, World!" after 2 seconds. It uses setTimeout to delay the resolution. The then method is called on the Promise to log the message to the console once it resolves. As a result, "Hello, World!" will be logged to the console after a 2-second delay.
 `}{" "}
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
@@ -119,10 +118,9 @@ helloPromise.then((message) => console.log(message));
                     <strong>➡️ Explanation of Question 143</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code creates a Promise named conditionalPromise that either resolves with "Success!" or rejects with an error "Failure" based on a random condition. It uses Math.random() to generate a random number and checks if it is greater than 0.5 to decide success or failure. The then method handles the successful resolution by logging the result, while the catch method handles the rejection by logging the error message. As a result, the code will randomly log either "Success!" or "Failure" to the console based on the outcome of the promise.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -189,9 +187,7 @@ conditionalPromise
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                   This code demonstrates the use of Promise.all to wait for multiple promises to resolve. It creates three promises: promise1 which resolves immediately with the value 3, promise2 which is a straightforward value 42 (treated as a resolved promise), and promise3 which resolves with "foo" after a 100-millisecond delay. Promise.all is used to wait for all three promises to resolve, and then it logs the array of their results, [3, 42, "foo"], to the console. This shows how Promise.all can handle multiple promises simultaneously.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

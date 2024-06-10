@@ -58,9 +58,8 @@ const Day50 = () => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.
+This code uses setTimeout to log a message after a 2-second delay. The setTimeout function takes two arguments: a callback function and a delay time in milliseconds. In this example, the callback function logs the message "This message is shown after a 2-second delay." to the console. This demonstrates how setTimeout can be used to delay actions in your code.
+
 `}{" "}
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
@@ -114,10 +113,10 @@ setTimeout(() => {
                     <strong>➡️ Explanation of Question 149</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code demonstrates the asynchronous nature of setTimeout and the event loop. Initially, "Start" is logged to the console. Then, a setTimeout function with a callback is called with a delay of 0 milliseconds. Despite the 0-millisecond delay, the callback is not immediately executed. Instead, "End" is logged to the console next. Finally, the callback "Callback executed" is logged to the console. This is because even though the timeout is 0, the callback is queued in the event loop and executed after the current synchronous code has finished executing.
+
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-50">
@@ -175,9 +174,12 @@ console.log("End");
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                
+In this code, there are two parts: a synchronous example and an asynchronous example.
+
+The synchronous example includes a long loop simulating a blocking operation between two console.log statements. Despite the long loop, the second console.log statement is not executed until the loop completes. This demonstrates synchronous behavior, where each operation is completed before the next one begins.
+
+The asynchronous example uses setTimeout to simulate an asynchronous operation that completes after 1 second. Even though the setTimeout is set to delay for 1 second, the rest of the code continues executing without waiting for it. This showcases how asynchronous operations allow other code to continue running without waiting for them to complete, enhancing the responsiveness of applications.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

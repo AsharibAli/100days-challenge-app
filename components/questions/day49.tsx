@@ -58,9 +58,8 @@ const Day49 = () => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.
+This code defines a function executeCallback that accepts a callback function and two arguments. It then invokes the callback with the provided arguments. An example callback function add is defined, which adds two numbers and logs the result to the console. Finally, executeCallback is called with add as the callback function and arguments 5 and 3, resulting in the output 8, which is the sum of the two arguments. This demonstrates how to use a callback function with arguments in TypeScript.
+
 `}{" "}
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
@@ -128,10 +127,10 @@ executeCallback(add, 5, 3); // Outputs: 8
                     <strong>➡️ Explanation of Question 146</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code demonstrates the use of the filter method to create a new array containing only numbers greater than 5 from an existing array. The numbers array contains numbers from 1 to 10. The filter method is called on the numbers array with a callback function that checks if a number is greater than 5. The filteredNumbers array then contains only the numbers that satisfy this condition, which are [6, 7, 8, 9, 10]. Finally, the filteredNumbers array is logged to the console.
+
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-49">
@@ -186,9 +185,9 @@ console.log(filteredNumbers); // Outputs: [6, 7, 8, 9, 10]
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+                  This code defines a fetchData function that simulates fetching data with a chance of encountering an error. It takes a callback function as an argument, which follows a pattern where the first parameter is an error object (or null if there is no error), and the second parameter is the data (optional). Inside fetchData, it randomly decides whether to call the callback with null and the fetched data or with an error object.
+
+The example usage of fetchData demonstrates error handling in the callback. If an error occurs during fetching, the callback receives the error object, which is then logged to the console. If no error occurs, the callback receives the fetched data, which is logged to the console. This pattern allows for graceful error handling when working with asynchronous operations.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>

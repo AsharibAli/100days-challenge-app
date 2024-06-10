@@ -58,9 +58,8 @@ const Day47 = () => {
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-Node.js is a free, open-source, cross-platform JavaScript
-                    runtime environment that lets developers create servers, web
-                    apps, command line tools and scripts.
+This code demonstrates the use of the reserved words let, if, and return. The let keyword is used to declare a block-scoped variable named count with an initial value of 5. The if statement checks if count is greater than 0, and if true, it logs a message to the console. The return keyword is used in the add function to return the sum of its two arguments, a and b, and exit the function. This code illustrates how these reserved words can be used in valid and common scenarios.
+
 `}{" "}
                     <br /> <br />
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
@@ -126,10 +125,9 @@ function add(a, b) {
                     <strong>➡️ Explanation of Question 140</strong>
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    {`This code defines a variable myName with the value "Asharib"
-                    and then prints a message to the console saying, "Hello
-                    Asharib, Want to learn some TypeScript today?"
-                    using template literals for string interpolation.`}
+                    {`
+                    This code snippet explains that using a reserved word as a variable name causes a syntax error. It shows an example where attempting to declare a variable named if with let if = 5; would result in an error. The code then logs a message to the console, emphasizing that reserved words should not be used as identifiers to avoid such errors.
+                    `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
                         <pre className="code-snippet bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-auto max-h-48">
@@ -186,9 +184,7 @@ console.log(
                   </AlertDialogTitle>
                   <AlertDialogDescription>
                     {`
-                   This code defines a variable myName with the value "Asharib" and then prints three 
-                   variations of the name to the console: all lowercase, all uppercase, and with only 
-                   the first letter capitalized while the rest are in lowercase.
+              This code demonstrates the use of the await keyword in asynchronous programming. Inside the fetchData function, which is declared with async, the await keyword is used to pause the execution until the fetchSomething function (which returns a Promise) settles. Once it resolves, the code resumes and logs the data. The await keyword helps write asynchronous code in a more readable and linear manner.
                     `}
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md mt-4">
                       <code>
