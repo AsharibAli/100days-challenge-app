@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { SearchIcon, MenuIcon, XIcon } from "lucide-react";
+import SearchComponent from "@/components/SearchComponent";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,15 +14,10 @@ const Header = () => {
   return (
     <header className="bg-gray-900 text-white py-4 px-6">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">GIAIC</h1>
-        <div className="relative w-1/2 md:w-1/3 lg:w-1/4">
-          <input
-            className="text-black w-full h-10 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 transition-colors"
-            placeholder="Search..."
-            type="text"
-          />
-          <SearchIcon className="absolute right-2 top-1/2 transform -translate-y-2/4 w-5 h-5 text-gray-500" />
-        </div>
+        <h1 className="text-2xl font-bold">
+          <Link href="/">GIAIC</Link>
+        </h1>
+        <SearchComponent />
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isOpen ? (
