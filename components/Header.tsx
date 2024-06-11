@@ -17,7 +17,10 @@ const Header = () => {
         <h1 className="text-2xl font-bold">
           <Link href="/">GIAIC</Link>
         </h1>
-        <SearchComponent />
+        {/* Hide SearchComponent on mobile, show on larger screens */}
+        <div className="hidden md:block">
+          <SearchComponent />
+        </div>
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isOpen ? (
@@ -60,7 +63,7 @@ const Header = () => {
             <Link className="hover:underline" href="/">
               Home
             </Link>
-            <Link className="hover:underline" href="#">
+            <Link className="hover:underline" href="/about">
               About
             </Link>
             <Link className="hover:underline" href="/challenges">
@@ -79,6 +82,10 @@ const Header = () => {
               target="_blank"
             >
               Discord
+            </Link>
+            {/* Search link for mobile devices */}
+            <Link className="hover:underline" href="/search">
+              Search 🔍
             </Link>
           </nav>
         </div>

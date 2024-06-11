@@ -46,7 +46,7 @@ const SearchComponent = () => {
   }, [searchQuery]);
 
   return (
-    <div className="relative w-full md:w-1/2 lg:w-1/3">
+    <div className="relative w-full hidden md:block md:w-1/2 lg:w-1/3">
       <input
         className="text-black w-full h-10 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 transition-colors"
         placeholder="Search..."
