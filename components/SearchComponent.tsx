@@ -3,19 +3,25 @@ import React, { useState, useEffect } from "react";
 import { SearchIcon } from "lucide-react";
 import * as questions from "@/components/questions"; // Import all question components
 
+// Define the type for search results
+type SearchResult = {
+  name: string;
+  component: JSX.Element;
+};
+
 const SearchComponent = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<SearchResult[]>([]); // Initialize with the correct type
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
 
   useEffect(() => {
-    const searchQuestions = (query:any) => {
+    const searchQuestions = (query: string): SearchResult[] => {
       if (!query) return [];
 
-      const results = [];
+      const results: SearchResult[] = [];
 
       for (const [key, Component] of Object.entries(questions)) {
         const content = Component.toString().toLowerCase();
@@ -23,7 +29,7 @@ const SearchComponent = () => {
         if (content.includes(query.toLowerCase())) {
           results.push({
             name: key,
-            component: <Component />
+            component: <Component />,
           });
         }
       }

@@ -1,22 +1,27 @@
 "use client";
 import React, { useState, useEffect } from "react";
-// import SearchIcon from "@/components/icons/icons"; // Make sure you have the correct path to your SearchIcon component
-import * as questions from "@/components/questions"; // Import all question components
 import { SearchIcon } from "lucide-react";
+import * as questions from "@/components/questions"; // Import all question components
 
-const SearchPage = () => {
+// Define the type for search results
+type SearchResult = {
+  name: string;
+  component: JSX.Element;
+};
+
+const SearchComponent = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<SearchResult[]>([]); // Initialize with the correct type
 
-  const handleSearchChange = (event:any) => {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
   };
 
   useEffect(() => {
-    const searchQuestions = async (query:any) => {
+    const searchQuestions = (query: string): SearchResult[] => {
       if (!query) return [];
 
-      const results = [];
+      const results: SearchResult[] = [];
 
       for (const [key, Component] of Object.entries(questions)) {
         const content = Component.toString().toLowerCase();
@@ -32,8 +37,8 @@ const SearchPage = () => {
       return results;
     };
 
-    const fetchResults = async () => {
-      const searchResults = await searchQuestions(searchQuery);
+    const fetchResults = () => {
+      const searchResults = searchQuestions(searchQuery);
       setResults(searchResults);
     };
 
@@ -41,25 +46,27 @@ const SearchPage = () => {
   }, [searchQuery]);
 
   return (
-    <div>
-      <div className="relative w-1/2 md:w-1/3 lg:w-1/4">
-        <input
-          className="text-black w-full h-10 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 transition-colors"
-          placeholder="Search..."
-          type="text"
-          value={searchQuery}
-          onChange={handleSearchChange}
-        />
-        <SearchIcon className="absolute right-2 top-1/2 transform -translate-y-2/4 w-5 h-5 text-gray-500" />
-      </div>
-
-      <div>
-        {results.map((result, index) => (
-          <div key={index}>{result.component}</div>
-        ))}
-      </div>
+    <div className="relative w-full md:w-1/2 lg:w-1/3">
+      <input
+        className="text-black w-full h-10 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 transition-colors"
+        placeholder="Search..."
+        type="text"
+        value={searchQuery}
+        onChange={handleSearch}
+      />
+      <SearchIcon className="absolute right-2 top-1/2 transform -translate-y-2/4 w-5 h-5 text-gray-500" />
+      {searchQuery && (
+        <div className="absolute mt-2 bg-white border border-gray-300 rounded-md shadow-lg w-full">
+          {results.map((result, index) => (
+            <div key={index} className="p-4">
+              <h3 className="font-semibold">{result.name}</h3>
+              {result.component}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-export default SearchPage;
+export default SearchComponent;
