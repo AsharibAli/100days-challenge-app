@@ -46,7 +46,9 @@ const SearchComponent = () => {
   }, [searchQuery]);
 
   return (
-    <div className="relative w-full hidden md:block md:w-1/2 lg:w-1/3">
+    <div className="relative w-full md:w-full lg:w-96">
+      {" "}
+      {/* Adjusted widths for better responsiveness */}
       <input
         className="text-black w-full h-10 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 transition-colors"
         placeholder="Search..."
@@ -54,7 +56,7 @@ const SearchComponent = () => {
         value={searchQuery}
         onChange={handleSearch}
       />
-      <SearchIcon className="absolute right-2 top-1/2 transform -translate-y-2/4 w-5 h-5 text-gray-500" />
+      <SearchIcon className="absolute right-2 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
       {searchQuery && (
         <div className="absolute mt-2 bg-white border border-gray-300 rounded-md shadow-lg w-full">
           {results.map((result, index) => (

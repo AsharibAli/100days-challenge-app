@@ -85,7 +85,7 @@ const Header = () => {
             </Link>
             {/* Search link for mobile devices */}
             <Link className="hover:underline" href="/search">
-              Search 🔍
+              Search
             </Link>
           </nav>
         </div>
